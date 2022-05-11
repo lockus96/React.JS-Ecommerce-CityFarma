@@ -1,0 +1,40 @@
+.navBar{
+     display: flex;
+     flex-direction: row;
+     justify-content:flex-start;
+     background-color: rgb(206, 255, 213);
+
+}
+.logoPrincipal{
+     height: 75px;
+     margin-left: 10%;
+}
+
+.logoCarrito{
+     margin-top: 25%;
+     height: 50px;
+     margin-right: 10%;
+}
+
+.loginButton{
+     margin-top: 25px;
+     margin-left: 150px;
+}
+
+.carritoItem{
+     margin-left: 10px;
+     margin-right: 10%;
+}
+.itemsNav{
+     width: 50%;
+
+     color: black;
+     list-style: none;
+     text-decoration: none;
+     display: flex;
+     align-items:center;
+     justify-content: space-around;
+     font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+     font-weight: bold;
+     font-size: 20px;
+}
