@@ -1,6 +1,6 @@
 import './NavBar.css'
-import logo from './logo1.png'
-import logoCarrito from './carrito1.png'
+import logo from './images/logo1.png'
+import CartWidget from '../CartWidget/CartWidget'
 
 const NavBar = () => {
      return (
@@ -28,9 +28,7 @@ const NavBar = () => {
                          Login
                     </button>
                </div>
-               <div className='carritoItem'>
-                    <img src={logoCarrito} alt="logoCarrito" className='logoCarrito' />     
-               </div> 
+               <CartWidget className='carritoItem'/>
               
 
           </nav>
