@@ -29,6 +29,9 @@ const NavBar = () => {
                     </button>
                </div>
                <CartWidget className='carritoItem'/>
+               <div>
+                    <p className="cantidadCarrito"> 2 </p>
+               </div>
               
 
           </nav>
