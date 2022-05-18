@@ -7,9 +7,7 @@ function App() {
   return (
       <header className="App-header">
           <NavBar />  
-          <div>
-                    <p className="cantidadCarrito"> 2 </p>
-          </div>
+          
       {/* No lo inserto acá porque ya lo tengo insertado en el navbar, de todas formas
           lo dejo para que se vea que funciona igual!
           <CartWidget /> */}
