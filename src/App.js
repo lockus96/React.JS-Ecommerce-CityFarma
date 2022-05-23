@@ -2,16 +2,14 @@ import './components/styles/App.css';
 import NavBar from './components/NavBar/NavBar'
 import ItemListContainer from './components/ItemListContainer/ItemListContainer';
 import CartWidget from './components/CartWidget/CartWidget';
+import ItemCount from './components/ItemCount/ItemCount';
 
 function App() {
   return (
       <header className="App-header">
           <NavBar />  
-          
-      {/* No lo inserto acá porque ya lo tengo insertado en el navbar, de todas formas
-          lo dejo para que se vea que funciona igual!
-          <CartWidget /> */}
           <ItemListContainer greeting="Bienvenidos a Clave a Do" />
+          <ItemCount />
           
       </header>
   );
