@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-const ItemCount = ({stock, initial}) =>{
+const ItemCount = ({stock, initial, onAdd}) =>{
      const [cuenta, setCuenta] = useState(initial)
      
      const disminuir = () => {
@@ -13,12 +13,16 @@ const ItemCount = ({stock, initial}) =>{
           }
      
      }
+     const agregarTotal = () =>{
+          onAdd (cuenta)
+     }
      return (
           <div className="card contador">
                <div className="card-body">
-                    <h5 className="card-title numeroContador">{cuenta}</h5>
                     <button className="btn btn-primary" onClick={disminuir}> - </button>
                     <button className="btn btn-primary" onClick={aumentar}> + </button>
+                    <h5 className="card-title numeroContador">{cuenta}</h5>
+                    <button className="btn btn-primary" onClick={agregarTotal}> Agregar </button>
                </div>
           </div> 
 
