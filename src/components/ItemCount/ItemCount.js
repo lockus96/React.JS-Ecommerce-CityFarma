@@ -1,14 +1,16 @@
 import { useState } from "react";
 
-const ItemCount = () =>{
-     const [cuenta, setCuenta] = useState(0)
+const ItemCount = ({stock, initial}) =>{
+     const [cuenta, setCuenta] = useState(initial)
      
      const disminuir = () => {
-          setCuenta((cuenta - 1))
+          setCuenta(cuenta => Math.max (cuenta - 1, initial))
           
      }
      const aumentar = () =>{
-          setCuenta((cuenta + 1))
+          if(!stock == 0){
+               setCuenta(cuenta => Math.min (cuenta + 1, stock))
+          }
      
      }
      return (
