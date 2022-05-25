@@ -1,13 +1,18 @@
-const Item = () =>{
+const Item = (props) =>{
      return (
-          <div className="card text-center" style="width: 18rem;">
-          <img src="..." className="card-img-top" alt="..." />
-          <div className="card-body">
-          <h5 className="card-title">NOMBRE</h5>
-          <p className="card-text">DESCRIPCION</p>
-          <a href="#" className="btn btn-primary">VER EN DETALLE</a>
-          </div>
-          </div>
+          
+          <>
+             {props.producto.map((item) => {
+               return (
+                    <tr key={item.id}>
+                         <td>{item.nombre}</td>
+                         <td>{item.categoria}</td>
+                         <td>{item.precio}</td>
+                    </tr>
+               )
+               })}  
+          </>
+          
      )
 }
 
