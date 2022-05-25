@@ -1,5 +1,7 @@
 import { getProducts } from "../../asyncmock"
 import ItemList from "../ItemList/ItemList"
+import { useEffect } from "react"
+
  
 
 const ItemListContainer = (props) =>{
