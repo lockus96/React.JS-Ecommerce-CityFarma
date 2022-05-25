@@ -10,7 +10,7 @@ function App() {
           <NavBar />  
           <ItemListContainer greeting="Bienvenidos a Clave a Do" />
           <ItemCount stock="5" initial="0" />
-          <ItemList/>
+          <ItemList className="d-flex flex-row bd-highlight mb-3" />
       </header>
   );
 }

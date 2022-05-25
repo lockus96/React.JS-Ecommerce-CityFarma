@@ -15,18 +15,7 @@ const ItemList = () =>{
      }, [])
 
      return (
-          <table>
-               <thead>
-                    <tr>
-                         <th>Nombre</th>
-                         <th>Categoria</th>
-                         <th>Precio</th>
-                    </tr>
-               </thead>
-               <tbody>
-                    <Item producto={productos}/>
-               </tbody>
-          </table>
+          <Item producto={productos}/>
      )
 }
 export default ItemList
