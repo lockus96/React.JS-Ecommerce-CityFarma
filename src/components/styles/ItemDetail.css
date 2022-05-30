@@ -25,7 +25,7 @@
      grid-template-columns: 1fr;
      grid-template-rows: 0.3fr repeat(6, 1fr) 0.3fr;
      grid-column-gap: 0px;
-     grid-row-gap: 10px;
+     grid-row-gap: 0px;
      justify-items: center;
 
 }
@@ -38,11 +38,13 @@
 
 .containerEstado{
      font-family: Verdana, Geneva, Tahoma, sans-serif;
-     font-size: 75%;
+     font-size: 100%;
      grid-area: 3 / 1 / 4 / 2;
 }
 
 .containerDescripcion{
+     margin-left: 30px;
+     margin-right: 30px;
      font-family: Verdana, Geneva, Tahoma, sans-serif;
      font-size: 75%;
      font-style: italic;

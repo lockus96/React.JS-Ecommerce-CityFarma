@@ -7,7 +7,7 @@ const product = [
           envioflash: 'disponible',
           categoria: 'Instrumentos',
           precio: 350000,
-          descripcion: 'Hecho en USA',
+          descripcion: 'La guitarra Les Paul o guitarra Gibson Les Paul, que es su nombre oficial, es una guitarra Gibson de gama alta, que comenzó a fabricarse en la década de 1950. Su principal característica que las diferencia de otras Gibson es que su forma es inconfundible, con su mástil corto, sus dos pastillas y sus cuatro botones. ',
           img: 'https://http2.mlstatic.com/D_NQ_NP_723782-MLA46353231078_062021-W.webp'
      }
 ]

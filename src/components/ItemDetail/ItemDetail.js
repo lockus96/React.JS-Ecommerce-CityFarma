@@ -10,7 +10,7 @@ const ItemDetail = (props) =>{
                          </div>
                          <div className="containerInfo">
                                    <h5 className="containerTitulo">{item.nombre}</h5>
-                                   <p className="containerEstado">{item.estado}</p>
+                                   <p className="containerEstado">Condición: {item.estado}</p>
                                    <p className="containerDescripcion">{item.descripcion}</p>
                                    <p className="containerEnvio">Envio flash: {item.envioflash}</p>
                                    <p className="containerPrecio">Precio: ${item.precio}</p>
