@@ -1,8 +1,8 @@
-import ItemCount from "../ItemCount/ItemCount"
+
 
 const ItemList = (props) =>{
      return (
-          <div>
+          <>
                {props.producto.map((item) => {
                return (
 
@@ -19,7 +19,7 @@ const ItemList = (props) =>{
                )
                })}  
      
-          </div>
+          </>
      )
 }
 

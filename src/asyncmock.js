@@ -1,3 +1,17 @@
+const product = [
+     {
+          id: '1',
+          nombre: 'Gibson Les Paul',
+          año: '2007',
+          estado: 'Nuevo',
+          envioflash: 'disponible',
+          categoria: 'Instrumentos',
+          precio: 350000,
+          descripcion: 'Hecho en USA',
+          img: 'https://http2.mlstatic.com/D_NQ_NP_723782-MLA46353231078_062021-W.webp'
+     }
+]
+
 const products = [
      {
           id: '1',
@@ -41,3 +55,10 @@ export const getProducts = () => {
      })
 }
 
+export const getProduct = () => {
+     return new Promise((resolve) => {
+          setTimeout(() => {
+               resolve(product)
+          }, 2000)
+     })
+}

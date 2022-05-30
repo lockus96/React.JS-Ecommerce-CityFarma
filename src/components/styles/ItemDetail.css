@@ -1,0 +1,69 @@
+.containerBody{
+     width: 50%;
+     border: 1px solid rgba(0, 0, 0, 0.116);
+     border-radius: 3%;
+     display: grid;
+     grid-template-columns: repeat(2, 0.5fr);
+     grid-template-rows: 1fr;
+     grid-column-gap: 0px;
+     grid-row-gap: 0px;
+
+}
+.containerImg{
+     border: 1px solid rgba(0, 0, 0, 0.116);
+
+     grid-area: 1 / 1 / 2 / 2;
+}
+.imgThumbnail{
+   height: 100%;
+   margin-left: 15%;
+}
+
+.containerInfo{
+     grid-area: 1 / 2 / 2 / 3;
+     display: grid;
+     grid-template-columns: 1fr;
+     grid-template-rows: 0.3fr repeat(6, 1fr) 0.3fr;
+     grid-column-gap: 0px;
+     grid-row-gap: 10px;
+     justify-items: center;
+
+}
+
+.containerTitulo{
+     font-family: Verdana, Geneva, Tahoma, sans-serif;
+     font-size: 250%;
+     grid-area: 2 / 1 / 3 / 2; 
+}
+
+.containerEstado{
+     font-family: Verdana, Geneva, Tahoma, sans-serif;
+     font-size: 75%;
+     grid-area: 3 / 1 / 4 / 2;
+}
+
+.containerDescripcion{
+     font-family: Verdana, Geneva, Tahoma, sans-serif;
+     font-size: 75%;
+     font-style: italic;
+     grid-area: 4 / 1 / 5 / 2;
+}
+
+.containerEnvio{
+     font-family: Verdana, Geneva, Tahoma, sans-serif;
+     font-size: 75%;
+     color: green;
+     grid-area: 5 / 1 / 6 / 2;
+}
+
+.containerPrecio{
+     font-family: Verdana, Geneva, Tahoma, sans-serif;
+     font-size: 150%;
+     grid-area: 6 / 1 / 7 / 2;
+}
+
+.containerBoton{
+     grid-area: 7 / 1 / 8 / 2;
+     align-items: center !important;
+     align-self: center;
+}
