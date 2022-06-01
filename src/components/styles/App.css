@@ -5,3 +5,27 @@
 .numeroContador{
      text-align: center;
 }
+
+.bodyAppItems{
+     width: 100vw;
+     height: 100vh;
+
+}
+
+.grillaItems{
+     display: grid;
+     grid-template-columns: auto auto auto auto;
+     grid-template-rows: auto auto auto;
+     width: auto;
+     margin: auto;
+     justify-self: center;
+     justify-content: space-around;
+     margin-top: 5%;
+     row-gap: 5%;
+
+}
+
+.imgListThumbnail{
+     width: 200px;
+     height: auto;
+}

@@ -15,7 +15,9 @@ const ItemListContainer = () =>{
      }, [])
 
      return (
+          <div className='grillaItems'>
           <ItemList producto={productos}/>
+          </div>
      )
 }
 export default ItemListContainer

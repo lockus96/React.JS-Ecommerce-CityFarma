@@ -34,14 +34,20 @@
 }
 .itemsNav{
      width: 50%;
-
+     margin-top: 1%;
      color: black;
-     list-style: none;
-     text-decoration: none;
+     list-style: none !important;
+     text-decoration: none !important;
      display: flex;
      align-items:center;
      justify-content: space-around;
      font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
      font-weight: bold;
-     font-size: 20px;
+}
+
+.textoNav{
+     list-style: none !important;
+     text-decoration: none !important;
+     color: black;
+     font-size: 16px;
 }
