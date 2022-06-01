@@ -7,16 +7,14 @@ const ItemDetailContainer = () =>{
      const [producto, setProducto] = useState([]);
 
      useEffect(() => {
-          getProduct().then(data => {
+          getProduct('1').then(data => {
                setProducto(data)
                }
           )
      }, [])
 
      return (
-         <div>
               <ItemDetail producto={producto} />
-         </div>
      )
 }
 export default ItemDetailContainer

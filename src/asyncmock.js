@@ -1,4 +1,4 @@
-const product = [
+const products = [
      {
           id: '1',
           nombre: 'Gibson Les Paul',
@@ -8,17 +8,6 @@ const product = [
           categoria: 'Instrumentos',
           precio: 350000,
           descripcion: 'La guitarra Les Paul o guitarra Gibson Les Paul, que es su nombre oficial, es una guitarra Gibson de gama alta, que comenzó a fabricarse en la década de 1950. Su principal característica que las diferencia de otras Gibson es que su forma es inconfundible, con su mástil corto, sus dos pastillas y sus cuatro botones. ',
-          img: 'https://http2.mlstatic.com/D_NQ_NP_723782-MLA46353231078_062021-W.webp'
-     }
-]
-
-const products = [
-     {
-          id: '1',
-          nombre: 'Gibson Les Paul',
-          categoria: 'Instrumentos',
-          precio: 350000,
-          descripcion: 'Hecho en USA',
           img: 'https://http2.mlstatic.com/D_NQ_NP_723782-MLA46353231078_062021-W.webp'
      },
      {
@@ -55,10 +44,10 @@ export const getProducts = () => {
      })
 }
 
-export const getProduct = () => {
-     return new Promise((resolve) => {
+export const getProduct = (id) => {
+     return new Promise (resolve => {
           setTimeout(() => {
-               resolve(product)
+               resolve(products.find(prod => prod.id === id))
           }, 2000)
      })
 }
