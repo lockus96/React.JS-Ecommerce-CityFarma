@@ -21,7 +21,7 @@ const ItemDetailContainer = () =>{
      return (
           producto !== undefined ? 
               <ItemDetail producto={producto} />
-              : <h2> todos putos</h2>
+              : <h2>Algo salio mal</h2>
      )
 }
 export default ItemDetailContainer
