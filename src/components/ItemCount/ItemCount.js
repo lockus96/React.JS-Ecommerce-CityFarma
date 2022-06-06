@@ -17,14 +17,14 @@ const ItemCount = ({stock, initial, onAdd}) =>{
           onAdd (cuenta)
      }
      return (
-          <div className="card contador">
+          <div className="card contador containerBoton">
                <div className="card-body">
-                    <div className="row">
-                    <button className="btn btn-outline-dark btn-sm col-6" onClick={disminuir}> - </button>
-                    <button className="btn btn-outline-dark btn-sm col-6" onClick={aumentar}> + </button>
-                    </div>
+                    <div className="btn-contador">
+                    <button className="btn btn-outline-dark" onClick={disminuir}> - </button>
                     <h5 className="card-title numeroContador">{cuenta}</h5>
-                    <button className="btn btn-success" onClick={agregarTotal}> Agregar </button>
+                    <button className="btn btn-outline-dark" onClick={aumentar}> + </button>
+                    </div>
+                    <div className="btn btn-success btn-position" onClick={agregarTotal}> Agregar </div>
                </div>
           </div> 
 

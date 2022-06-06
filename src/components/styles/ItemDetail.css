@@ -10,9 +10,8 @@
 
 }
 .containerImg{
-     border: 1px solid rgba(0, 0, 0, 0.116);
-
      grid-area: 1 / 1 / 2 / 2;
+     margin-right: 15% !important;
 }
 .imgThumbnail{
    height: 100%;
@@ -34,6 +33,9 @@
      font-family: Verdana, Geneva, Tahoma, sans-serif;
      font-size: 250%;
      grid-area: 2 / 1 / 3 / 2; 
+     display: flex;
+     align-items: center;
+     justify-content: center;
 }
 
 .containerEstado{
@@ -68,4 +70,25 @@
      grid-area: 7 / 1 / 8 / 2;
      align-items: center !important;
      align-self: center;
+}
+
+.btn-contador{
+     display: flex;
+     justify-content: space-between;
+     align-items: flex-end
+}
+
+.card-body{
+     width: 100%;
+}
+.btn-position{
+     margin-top: 5%;
+     display: flex !important;
+     justify-content: space-around;
+     background-color: rgba(255, 0, 0, 0.623) !important;
+}
+
+.btn-outline-dark{
+     color: #212529 !important;
+    border-color: #21252936 !important;
 }

@@ -1,3 +1,5 @@
+import ItemCount from '../ItemCount/ItemCount.js'
+
 
 const ItemDetail = (props) =>{
      
@@ -6,7 +8,7 @@ const ItemDetail = (props) =>{
 
      return (
 
-          <div>
+          <div className='body-cards'>
                     <section className="containerBody">
                          <div className='containerImg'>
                          <img src={props.producto.img} alt="algo" className="imgThumbnail" />
@@ -17,7 +19,8 @@ const ItemDetail = (props) =>{
                                    <p className="containerDescripcion">{props.producto.descripcion}</p>
                                    <p className="containerEnvio">Envio flash: {props.producto.envioflash}</p>
                                    <p className="containerPrecio">Precio: ${props.producto.precio}</p>
-                                   <a href="#" className="btn btn-primary containerBoton">Agregar al carrito</a>
+                                   <ItemCount stock="5" initial="0" /> 
+                                   {/* <a href="#" className="btn btn-primary containerBoton">Agregar al carrito</a> */}
                          </div>
                     </section>
 

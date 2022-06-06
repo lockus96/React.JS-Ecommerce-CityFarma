@@ -25,6 +25,12 @@
 
 }
 
+.body-cards{
+     display: flex;
+     justify-content: center;
+     margin-top: 5%;
+}
+
 .imgListThumbnail{
      width: 200px;
      height: auto;
