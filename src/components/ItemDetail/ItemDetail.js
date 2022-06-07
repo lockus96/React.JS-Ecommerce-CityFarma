@@ -1,8 +1,13 @@
 import ItemCount from '../ItemCount/ItemCount.js'
+import { useState } from 'react'
 
 
 const ItemDetail = (props) =>{
      
+     const handleOnAdd = (cuenta) => {
+          console.log(cuenta)
+     }
+
      if(props.producto.length === 0){         
      } else {
 
@@ -19,7 +24,7 @@ const ItemDetail = (props) =>{
                                    <p className="containerDescripcion">{props.producto.descripcion}</p>
                                    <p className="containerEnvio">Envio flash: {props.producto.envioflash}</p>
                                    <p className="containerPrecio">Precio: ${props.producto.precio}</p>
-                                   <ItemCount stock="5" initial="0" /> 
+                                   <ItemCount onConfirm={handleOnAdd} stock="5" initial="0" /> 
                                    {/* <a href="#" className="btn btn-primary containerBoton">Agregar al carrito</a> */}
                          </div>
                     </section>
