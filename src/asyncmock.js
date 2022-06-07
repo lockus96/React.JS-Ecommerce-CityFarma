@@ -105,3 +105,12 @@ export const getProduct = (id) => {
           }, 500)
      })
 }
+
+
+export const getProductsInstrumento = (Instrumentos) => {
+     return new Promise (resolve => {
+          setTimeout(() => {
+               resolve(products.find(prod => prod.Instrumentos === Instrumentos))
+          }, 500)
+     })
+}

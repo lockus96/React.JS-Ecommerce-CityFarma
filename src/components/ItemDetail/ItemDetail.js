@@ -1,11 +1,14 @@
 import ItemCount from '../ItemCount/ItemCount.js'
 import { useState } from 'react'
+import { Link } from 'react-router-dom'
 
 
 const ItemDetail = (props) =>{
-     
+
+     const [cantidad, setCantidad] = useState(0)
+
      const handleOnAdd = (cuenta) => {
-          console.log(cuenta)
+          setCantidad(cuenta)
      }
 
      if(props.producto.length === 0){         
@@ -24,8 +27,7 @@ const ItemDetail = (props) =>{
                                    <p className="containerDescripcion">{props.producto.descripcion}</p>
                                    <p className="containerEnvio">Envio flash: {props.producto.envioflash}</p>
                                    <p className="containerPrecio">Precio: ${props.producto.precio}</p>
-                                   <ItemCount onConfirm={handleOnAdd} stock="5" initial="0" /> 
-                                   {/* <a href="#" className="btn btn-primary containerBoton">Agregar al carrito</a> */}
+                                   { cantidad > 0 ? <Link to='/cart' className='btn btn-success contador containerBoton'>Ir al carrito</Link> : <ItemCount onConfirm={handleOnAdd} stock="5" initial="0" />} 
                          </div>
                     </section>
 
