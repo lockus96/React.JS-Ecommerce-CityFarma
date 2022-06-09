@@ -8,19 +8,19 @@ const NavBar = () => {
           <nav className='navBar bodyNav'>
                <img src={logo} alt="logo" className='logoPrincipal' />
                <ul className='itemsNav'>
-                    <li className='btn btn-outline-secondary'>
+                    <li className='btn'>
                          <Link to='/' className='textoNav'> Inicio </Link>
                     </li>
-                    <li className='btn btn-outline-secondary'>
+                    <li className='btn'>
                          <Link to='/Instrumentos' className='textoNav'> Instrumentos </Link>
                     </li>
-                    <li className='btn btn-outline-secondary'>
-                         <Link to='/ElectronicaAudio' className='textoNav'> Electrónica y Audio </Link>
+                    <li className='btn'>
+                         <Link to='/ElectronicaAudio' className='textoNav'> Electrónica </Link>
                     </li>
-                    <li className='btn btn-outline-secondary'>
+                    <li className='btn'>
                          <Link to='/Accesorios' className='textoNav'> Accesorios </Link>
                     </li>
-                    <li className='btn btn-outline-secondary'>
+                    <li className='btn'>
                          <Link to='/DAWs' className='textoNav'> DAWs </Link>
                     </li>
                </ul>

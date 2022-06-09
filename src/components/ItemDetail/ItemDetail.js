@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom'
 import { Context } from '../../App'
 
 
-const ItemDetail = ({id, img, nombre, estado, descripcion, envioflash, precio}) =>{
+const ItemDetail = ({id, img, nombre, estado, descripcion, envioflash, precio, stock}) =>{
 
      
      const { carrito, setCarrito} = useContext(Context)
@@ -27,7 +27,7 @@ const ItemDetail = ({id, img, nombre, estado, descripcion, envioflash, precio}) 
                                    <p className="containerDescripcion">{descripcion}</p>
                                    <p className="containerEnvio">Envio flash: {envioflash}</p>
                                    <p className="containerPrecio">Precio: ${precio}</p>
-                                   { cantidad > 0 ? <Link to='/cart' className='btn btn-success contador containerBoton'>Ir al carrito</Link> : <ItemCount onConfirm={handleOnAdd} stock="5" initial="0" />} 
+                                   { cantidad > 0 ? <Link to='/cart' className='btn btn-success contador containerBoton'>Ir al carrito</Link> : <ItemCount onConfirm={handleOnAdd} stock={stock} initial="0" />} 
                          </div>
                     </section>  
           </div>

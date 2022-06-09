@@ -6,8 +6,10 @@ const ItemList = (props) =>{
                {props.producto.map((item) => {
                return (
 
-                    <div className="card text-center imgListThumbnail">
-                         <img src={item.img} alt="algo" />
+                    <div className="card text-center">
+                         <div className="overlay">
+                         <img src={item.img} className="imgitem" alt="algo" />
+                         </div>
                          <div className="card-body">
                          <h5 className="card-title">{item.nombre}</h5>
                          <p className="card-text">{item.descripcion}</p>

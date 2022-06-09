@@ -1,17 +1,21 @@
 .containerBody{
-     width: 50%;
      border: 1px solid rgba(0, 0, 0, 0.116);
      border-radius: 3%;
      display: grid;
-     grid-template-columns: repeat(2, 0.5fr);
+     grid-template-columns: 2fr 4fr;
      grid-template-rows: 1fr;
      grid-column-gap: 0px;
      grid-row-gap: 0px;
-
+     background-color: #D0CD94;
+     border-top-left-radius: 20px;
+     border-top-right-radius: 20px;
+     overflow: hidden;
+     margin-bottom: 15%;
 }
 .containerImg{
      grid-area: 1 / 1 / 2 / 2;
-     margin-right: 15% !important;
+     margin-right: 100%;
+     width: auto;
 }
 .imgThumbnail{
    height: 100%;
@@ -20,6 +24,7 @@
 
 .containerInfo{
      grid-area: 1 / 2 / 2 / 3;
+     width: 100%;
      display: grid;
      grid-template-columns: 1fr;
      grid-template-rows: 0.3fr repeat(6, 1fr) 0.3fr;
@@ -34,13 +39,12 @@
      font-size: 250%;
      grid-area: 2 / 1 / 3 / 2; 
      display: flex;
-     align-items: center;
-     justify-content: center;
+     text-align: center
 }
 
 .containerEstado{
      font-family: Verdana, Geneva, Tahoma, sans-serif;
-     font-size: 100%;
+     font-size: 150%;
      grid-area: 3 / 1 / 4 / 2;
 }
 
@@ -48,7 +52,7 @@
      margin-left: 30px;
      margin-right: 30px;
      font-family: Verdana, Geneva, Tahoma, sans-serif;
-     font-size: 75%;
+     font-size: 100%;
      font-style: italic;
      grid-area: 4 / 1 / 5 / 2;
 }
@@ -91,4 +95,21 @@
 .btn-outline-dark{
      color: #212529 !important;
     border-color: #21252936 !important;
+}
+
+.card{
+     background-color: #D0CD94 !important;
+     border-radius: 20px !important;
+     word-wrap: normal !important;
+}
+
+.overlay{
+     overflow: hidden;
+     width: 200px;
+}
+
+.imgitem{
+     width: 200px;
+     border-top-left-radius: 20px;
+     border-top-right-radius: 20px;
 }

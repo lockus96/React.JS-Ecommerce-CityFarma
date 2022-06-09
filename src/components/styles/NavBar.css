@@ -2,7 +2,7 @@
      display: flex;
      flex-direction: row;
      justify-content:flex-start;
-     background-color: rgb(206, 255, 213);
+     background-color: #241623;
 
 }
 .logoPrincipal{
@@ -48,6 +48,33 @@
 .textoNav{
      list-style: none !important;
      text-decoration: none !important;
-     color: black;
-     font-size: 16px;
+     color: #fdf49efd;
+     font-size: 20px;
 }
+.btn:hover{
+     transform: scale(1.3);
+     transition-duration: 200ms !important;
+}
+
+.btn{
+     transition: transform 200ms !important;
+     transition: color white 200ms !important;
+}
+
+.btn:focus,.btn:active {
+     outline: none !important;
+     box-shadow: none;
+  }
+
+.btn-outline-secondary{
+     border-color: rgba(0, 0, 0, 0) !important;
+     color: black;
+     background-color: white;
+     border-radius: 0px !important;
+     font-size: 16px;
+     font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+a:hover {
+      color: white !important; 
+ }
