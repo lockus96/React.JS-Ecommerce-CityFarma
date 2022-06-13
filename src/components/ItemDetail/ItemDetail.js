@@ -1,18 +1,17 @@
 import ItemCount from '../ItemCount/ItemCount.js'
 import { useContext, useState, useEffect } from 'react'
 import { Link } from 'react-router-dom'
-import { Context } from '../../App'
-
+import CartContext from '../../Context/CartContext.js'
 
 const ItemDetail = ({id, img, nombre, estado, descripcion, envioflash, precio, stock}) =>{
 
-     
-     const { carrito, setCarrito} = useContext(Context)
      const [cantidad, setCantidad] = useState(0)
+
+     const { addItem } = useContext(CartContext)
      
      const handleOnAdd = (cantidad) => {
           setCantidad(cantidad)
-          setCarrito([...carrito, {id, nombre, precio, cantidad}]) 
+          addItem({id, nombre, precio, cantidad})
      }
      return (
 
