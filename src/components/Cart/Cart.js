@@ -3,7 +3,7 @@ import CartContext from "../../Context/CartContext";
 
 const Cart = () => {
 
-     const { cart, removeItem } = useContext(CartContext);
+     const { cart, removeItem, clear } = useContext(CartContext);
 
      console.log(cart)
 
@@ -13,8 +13,9 @@ const Cart = () => {
      return (
           <div className="cartStyle">
                <h2 className="carritoText"> Carrito </h2>
-
-              
+               <div className="btnClear">
+                    <div className="btn btn-danger" onClick={() => {clear()}}>Limpiar carrito </div>
+               </div>
                <div>
                     {cart.map(item => (
                          <div key={item.id} className='cartItems'>
