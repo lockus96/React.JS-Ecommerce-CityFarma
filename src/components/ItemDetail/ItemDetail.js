@@ -11,7 +11,7 @@ const ItemDetail = ({id, img, nombre, estado, descripcion, envioflash, precio, s
      
      const handleOnAdd = (cantidad) => {
           setCantidad(cantidad)
-          addItem({id, nombre, precio, cantidad})
+          addItem({id, nombre, precio, cantidad, img})
      }
      return (
 

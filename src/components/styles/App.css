@@ -45,3 +45,48 @@
      height: 400px;
 }
 
+.cartStyle{
+     width: 100vw;
+     height: 100vh;
+}
+
+.cartItems{
+     width: 25% !important;
+     height: 25% !important;
+     display: flex;
+     margin: auto;
+     justify-self: center;
+     justify-content: space-around;
+     margin-top: 5%;
+     background-color: #D0CD94;
+     border-radius: 20px;
+     overflow: hidden;
+
+}
+
+.carritoText{
+     font-family: Verdana, Geneva, Tahoma, sans-serif;
+     font-size: 300%;
+     color: rgba(216, 243, 97, 0.774);
+     text-align: center;
+     margin-top: 5%;
+}
+
+.imgCart{
+     width: 150px;
+     height: 250px;
+     grid-area: 1 / 1 / 2 / 2;
+     margin-right: -2% !important;
+}
+
+.imgContainer{
+     margin-left: -10% !important;
+}
+
+.textItemCart{
+     font-family: Verdana, Geneva, Tahoma, sans-serif;
+     font-size: 120%;
+     color: rgba(0, 0, 0, 0.774);
+     text-align: center;
+     margin-top: 5%;
+}
