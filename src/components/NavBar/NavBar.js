@@ -1,9 +1,14 @@
 import '../styles/NavBar.css'
 import logo from '../NavBar/logo1.png'
 import CartWidget from '../CartWidget/CartWidget'
+import { useContext } from 'react'
 import { Link } from 'react-router-dom'
+import CartContext from "../../Context/CartContext"
 
 const NavBar = () => {
+
+     const { getQuantity } = useContext(CartContext)
+
      return (
           <nav className='navBar bodyNav'>
                <img src={logo} alt="logo" className='logoPrincipal' />
@@ -24,14 +29,12 @@ const NavBar = () => {
                          <Link to='/DAWs' className='textoNav'> DAWs </Link>
                     </li>
                </ul>
-               <div className='loginButton'>
+              {/*  <div className='loginButton'>
                     <Link to='/Login'> Login </Link>
-               </div>
+               </div> */}
                <CartWidget className='carritoItem'/>
-               <div>
-                    <p className="cantidadCarrito"> 2 </p>
-               </div>
-              
+               <p className="cantidad">{getQuantity()}</p>
+         
 
           </nav>
      )
