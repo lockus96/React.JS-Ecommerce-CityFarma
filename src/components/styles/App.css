@@ -94,5 +94,24 @@
 .btnClear{
      display: flex !important;
      justify-content: center
-     
+
+}
+
+.carritoVacio{
+     width: 100vh;
+     height: 100vh;
+
+}
+
+.carritoVacioTitle{
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     font-family: Verdana, Geneva, Tahoma, sans-serif;
+     font-size: 300%;
+     color: rgba(216, 243, 97, 0.774);
+     text-align: center;
+     margin-top: 20%;
+     margin-left: 20%;
+     padding-left: 20%;
 }

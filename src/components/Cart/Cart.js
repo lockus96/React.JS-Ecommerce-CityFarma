@@ -11,6 +11,7 @@ const Cart = () => {
 
 
      return (
+          cart.length === 0 ? <div className="carritoVacio"><h2 className="carritoVacioTitle">Ups! No hay nada en el carrito</h2></div> :    
           <div className="cartStyle">
                <h2 className="carritoText"> Carrito </h2>
                <div className="btnClear">

@@ -32,7 +32,12 @@ const NavBar = () => {
               {/*  <div className='loginButton'>
                     <Link to='/Login'> Login </Link>
                </div> */}
-               <CartWidget className='carritoItem'/>
+               
+               <div>
+                    <Link to='/Cart'> 
+                         <CartWidget className='carritoItem'/> 
+                    </Link>
+               </div>
                <p className="cantidad">{getQuantity()}</p>
          
 
