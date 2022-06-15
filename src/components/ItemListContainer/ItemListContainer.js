@@ -1,6 +1,9 @@
-import {getProducts} from '../../asyncmock.js'
 import {useState, useEffect} from 'react'
 import ItemList from '../ItemList/ItemList';
+import { getDocs, collection } from 'firebase/firestore'
+import { db } from '../../services/firebase'
+
+
 
 
 const ItemListContainer = () =>{
@@ -8,11 +11,17 @@ const ItemListContainer = () =>{
      const [productos, setProductos] = useState([]);
 
      useEffect(() => {
-          getProducts().then(data => {
-               setProductos(data)
-               }
-          )
-     }, [])
+
+          getDocs(collection(db, 'products')).then(data => {
+               const products = data.docs.map(doc => {
+                    return { id: doc.id, ...doc.data()}
+                    
+               })
+               setProductos(products)
+          }).catch(err => {
+               console.log(err)
+     })})
+    
 
      return (
           <div className='grillaItems'>
