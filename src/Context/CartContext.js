@@ -6,12 +6,11 @@ export const CartContextProvider = ({ children }) => {
      const [cart, setCart] = useState([])
 
      const addItem = (productToAdd) => {
+          setCart([...cart, productToAdd])
           if (isInCart(productToAdd)) {
-               setCart(cart.map(cart => cart.id === productToAdd.id ? { ...cart, cantidad: productToAdd.cantidad + cart.cantidad } : cart))                
-          }
-               setCart([...cart, productToAdd])
-          }
-
+                 setCart(cart.map(cart => cart.id === productToAdd.id ? { ...cart, cantidad: productToAdd.cantidad + cart.cantidad } : cart))                
+           }
+     }
      const removeItem = (id) => {
           setCart(cart.filter(item => item.id !== id)) 
      }
