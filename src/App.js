@@ -18,6 +18,7 @@ function App() {
             </header>
               <Routes>
                   <Route path='/' element={<ItemListContainer className="d-flex flex-row bd-highlight mb-3" />} />
+                  <Route path='/category/:categoryId' element={<ItemListContainer className="d-flex flex-row bd-highlight mb-3" />} />
                   <Route path='/detail/:productId' element={<ItemDetailContainer className="d-flex flex-row bd-highlight mb-3" />} />
                   <Route path='/cart' element={<Cart />} />
               </Routes>

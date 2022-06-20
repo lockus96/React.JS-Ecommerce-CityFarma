@@ -1,7 +1,8 @@
 import {useState, useEffect} from 'react'
 import ItemList from '../ItemList/ItemList';
-import { getDocs, collection } from 'firebase/firestore'
+import { getDocs, collection, where, query } from 'firebase/firestore'
 import { db } from '../../services/firebase'
+import { useParams } from 'react-router-dom';
 
 
 
@@ -10,9 +11,18 @@ const ItemListContainer = () =>{
 
      const [productos, setProductos] = useState([]);
 
+     
+     const {categoryId} = useParams()
+
+  
+
      useEffect(() => {
 
-          getDocs(collection(db, 'products')).then(data => {
+          const collectionRef = categoryId 
+          ? query (collection(db, 'products'), where('categoria', '==', categoryId))
+          : collection(db, 'products')
+
+          getDocs(collectionRef).then(data => {
                const products = data.docs.map(doc => {
                     return { id: doc.id, ...doc.data()}
                     
@@ -22,6 +32,7 @@ const ItemListContainer = () =>{
                console.log(err)
      })})
     
+     console.log(categoryId)
 
      return (
           <div className='grillaItems'>
@@ -29,4 +40,6 @@ const ItemListContainer = () =>{
           </div>
      )
 }
+
+
 export default ItemListContainer

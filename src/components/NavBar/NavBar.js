@@ -17,16 +17,16 @@ const NavBar = () => {
                          <Link to='/' className='textoNav'> Inicio </Link>
                     </li>
                     <li className='btn'>
-                         <Link to='/Instrumentos' className='textoNav'> Instrumentos </Link>
+                         <Link to='/category/Instrumentos' className='textoNav'> Instrumentos </Link>
                     </li>
                     <li className='btn'>
-                         <Link to='/ElectronicaAudio' className='textoNav'> Electrónica </Link>
+                         <Link to='/category/ElectronicaAudio' className='textoNav'> Electrónica </Link>
                     </li>
                     <li className='btn'>
-                         <Link to='/Accesorios' className='textoNav'> Accesorios </Link>
+                         <Link to='/category/Accesorios' className='textoNav'> Accesorios </Link>
                     </li>
                     <li className='btn'>
-                         <Link to='/DAWs' className='textoNav'> DAWs </Link>
+                         <Link to='/category/DAWs' className='textoNav'> DAWs </Link>
                     </li>
                </ul>
               {/*  <div className='loginButton'>
