@@ -3,6 +3,9 @@
      flex-direction: row;
      justify-content: space-between;
      background-color: #241623;
+     position: fixed;
+     top: 0px;
+     width: 100%;
 
 }
 .logoPrincipal{
