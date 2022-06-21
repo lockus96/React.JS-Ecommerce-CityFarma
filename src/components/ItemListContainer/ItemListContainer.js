@@ -32,7 +32,6 @@ const ItemListContainer = () =>{
                console.log(err)
      })})
     
-     console.log(categoryId)
 
      return (
           <div className='grillaItems'>
