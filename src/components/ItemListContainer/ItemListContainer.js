@@ -13,7 +13,7 @@ const ItemListContainer = () =>{
 
      
      const {categoryId} = useParams()
-
+     console.log(productos)
   
 
      useEffect(() => {
@@ -30,7 +30,9 @@ const ItemListContainer = () =>{
                setProductos(products)
           }).catch(err => {
                console.log(err)
-     })})
+          })
+     }, [categoryId])
+     
     
 
      return (
