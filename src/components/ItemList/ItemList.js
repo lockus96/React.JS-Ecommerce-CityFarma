@@ -11,7 +11,7 @@ const ItemList = (props) =>{
                               <img src={item.img} className="imgList" alt="algo" />
                               <h5 className="titleList">{item.nombre}</h5>
                               <p className="textList">Precio: ${item.precio}</p>
-                              <Link to={`detail/${item.id}`} className="btn btn-primary">Ver más</Link>
+                              <Link to={`/detail/${item.id}`} className="btn btn-primary">Ver más</Link>
                          </div>
                     </div>
                )
