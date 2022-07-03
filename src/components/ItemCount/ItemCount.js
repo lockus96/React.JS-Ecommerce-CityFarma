@@ -17,8 +17,8 @@ const ItemCount = ({stock, initial, onConfirm}) =>{
      }
      
      return (
-          <div className="card contador containerBoton">
-               <div className="card-body">
+          <div className="contadorBox">
+               <div className="containerBoton">
                     <div className="btn-contador">
                     <button className="btn btn-outline-dark" onClick={disminuir}> - </button>
                     <h5 className="card-title numeroContador">{cuenta}</h5>

@@ -16,17 +16,19 @@ const ItemDetail = ({id, img, nombre, estado, descripcion, envioflash, precio, s
      return (
 
           <div className='body-cards'>
-                    <section className="containerBody">
-                         <div className='containerImg'>
-                         <img src={img} alt="algo" className="imgThumbnail" />
-                         </div>
-                         <div className="containerInfo">
-                                   <h5 className="containerTitulo">{nombre}</h5>
-                                   <p className="containerEstado">Condición: {estado}</p>
-                                   <p className="containerDescripcion">{descripcion}</p>
-                                   <p className="containerEnvio">Envio flash: {envioflash}</p>
-                                   <p className="containerPrecio">Precio: ${precio}</p>
+                    <section className="containerListDetail">
+                         <div className='cardListDetail'>
+                              <div>
+                                   <img src={img} alt="algo" className="imgListDetail" />
+                              </div>
+                              <div className='cardDetail'>
+                                   <h5 className="titleList">{nombre}</h5>
+                                   <p className="textList">Condición: {estado}</p>
+                                   <p className="textList">{descripcion}</p>
+                                   <p className="textList">Envio flash: {envioflash}</p>
+                                   <p className="textList">Precio: ${precio}</p>
                                    { cantidad > 0 ? <Link to='/cart' className='btn btn-success contador containerBoton'>Ir al carrito</Link> : <ItemCount onConfirm={handleOnAdd} stock={stock} initial="0" />} 
+                              </div>
                          </div>
                     </section>  
           </div>

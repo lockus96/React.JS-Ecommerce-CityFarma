@@ -82,8 +82,9 @@
      align-items: flex-end
 }
 
-.card-body{
-     width: 100%;
+.contadorBox{
+     width: 150px;
+     height: 100px;
 }
 .btn-position{
      margin-top: 5%;
