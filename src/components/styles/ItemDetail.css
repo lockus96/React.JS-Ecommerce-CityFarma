@@ -83,6 +83,11 @@
 }
 
 .contadorBox{
+     width: 150px !important;
+     height: 100px !important;
+}
+
+.contadorBoxOk{
      width: 150px;
      height: 100px;
 }
@@ -115,3 +120,17 @@
      border-top-right-radius: 20px;
 }
 
+.btn-successAnimation{
+     transition: all 1s !important;
+     opacity: 1 !important;
+  
+}
+
+.contador{
+     opacity:0;
+}
+
+.btn:hover{
+     color: black !important;
+     transition: 0.2s !important;
+}

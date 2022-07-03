@@ -27,7 +27,7 @@ const ItemDetail = ({id, img, nombre, estado, descripcion, envioflash, precio, s
                                    <p className="textList">{descripcion}</p>
                                    <p className="textList">Envio flash: {envioflash}</p>
                                    <p className="textList">Precio: ${precio}</p>
-                                   { cantidad > 0 ? <Link to='/cart' className='btn btn-success contador containerBoton'>Ir al carrito</Link> : <ItemCount onConfirm={handleOnAdd} stock={stock} initial="0" />} 
+                                   { cantidad > 0 ? <div className='contadorBoxOk'> <Link to='/cart' className='contador btn btn-successAnimation'>Ir al carrito</Link> </div> : <ItemCount onConfirm={handleOnAdd} stock={stock} initial="0" />} 
                               </div>
                          </div>
                     </section>  
