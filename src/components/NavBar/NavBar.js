@@ -4,6 +4,10 @@ import CartWidget from '../CartWidget/CartWidget'
 import { useContext } from 'react'
 import { Link } from 'react-router-dom'
 import CartContext from "../../Context/CartContext"
+/* import { getDocs, collection, where, query } from 'firebase/firestore'
+import { db } from '../../services/firebase' 
+VER SI IMPORTA LOS LINKS DE IMG DESDE FIREBASE
+*/
 
 const NavBar = () => {
 
