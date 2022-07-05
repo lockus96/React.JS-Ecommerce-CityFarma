@@ -1,15 +1,12 @@
 import { useContext } from "react";
 import CartContext from "../../Context/CartContext";
-
 import Form from "../Form/Form";
-
-
 
 
 
 const Cart = () => {
 
-     const { getTotalToPay, cart, removeItem, clear, createOrder } = useContext(CartContext);
+     const { getTotalToPay, cart, removeItem, clear } = useContext(CartContext);
 
      
      
