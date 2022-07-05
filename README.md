@@ -1,11 +1,15 @@
 # Proyecto final de React para CoderHouse
-E-Commerce de una Tienda Musical
+**E-Commerce de una Tienda Musical**
 
 ### Comentarios
 
 Buenas! Después de investigar y luchar un poco con el código pude
 realizar las validaciones de los inputs para luego realizar el 
 pedido de compra. 
+
+###Librerías utilizadas:
+Bootstrap
+SweetAlert2
 
 Me encantó la cursada! Gracias por los conocimientos brindados, hasta otra.
 
