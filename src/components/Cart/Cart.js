@@ -11,9 +11,12 @@ const Cart = () => {
 
      const { getTotalToPay, cart, removeItem, clear, createOrder } = useContext(CartContext);
 
+<<<<<<< HEAD
      
      
 
+=======
+>>>>>>> master
 
 
      return (
@@ -51,7 +54,11 @@ const Cart = () => {
                </div>
 
                <Form />           
+<<<<<<< HEAD
         
+=======
+             
+>>>>>>> master
           </div>
      )}
 

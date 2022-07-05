@@ -291,6 +291,7 @@
 
 
 
+<<<<<<< HEAD
 .container {
      font-family: 'Montserrat', sans-serif;
      font-size: 120%;
@@ -344,10 +345,13 @@ input{
 
 
 
+=======
+>>>>>>> master
 
 
 
 
+<<<<<<< HEAD
      input::-webkit-outer-spin-button,
      input::-webkit-inner-spin-button {
 
@@ -357,3 +361,5 @@ input{
      input[type=number] {
     -moz-appearance:textfield; 
 }    
+=======
+>>>>>>> master
