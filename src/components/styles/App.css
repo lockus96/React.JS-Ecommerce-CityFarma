@@ -216,7 +216,7 @@
 
 
 .cartList{
-     width: 50%;
+     width: 250%;
      max-width: 1200px;
      max-height: 300px;
      height: 300px;     
@@ -255,6 +255,7 @@
 
 
 .grillaCart{
+     
      width: auto;
      margin: auto;
      justify-self: center;

@@ -2,6 +2,8 @@ import { useContext } from "react";
 import CartContext from "../../Context/CartContext";
 import { addDoc, collection } from 'firebase/firestore';
 import { db, collectionsName } from '../../services/firebase'
+import Form from "../Form/Form";
+
 
 
 
@@ -70,6 +72,10 @@ const Cart = () => {
                          ))}         
                     </div>     
                </div>
+
+               <Form />           
+
+
                <div className="btnClear">
                          <div className="btn btn-danger finalizarCarrito" onClick={createOrder}>Finalizar Compra </div>
                     </div>              
