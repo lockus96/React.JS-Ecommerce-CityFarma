@@ -9,7 +9,7 @@ export const CartContextProvider = ({ children }) => {
      const addItem = (productToAdd) => {
           setCart([...cart, productToAdd])
           if (isInCart(productToAdd)) {
-                 setCart(cart.map(cart => cart.id === productToAdd.id ? { ...cart, cantidad: productToAdd.cantidad + cart.cantidad } : cart))                
+                 setCart(cart.map(cart => cart.id === productToAdd.id ? { ...cart, cantidad: productToAdd.cantidad } : cart))                
            }
      }
      const removeItem = (id) => {

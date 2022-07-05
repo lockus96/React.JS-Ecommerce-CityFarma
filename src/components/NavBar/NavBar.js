@@ -1,13 +1,9 @@
 import '../styles/NavBar.css'
-import logo from '../NavBar/logo1.png'
 import CartWidget from '../CartWidget/CartWidget'
 import { useContext } from 'react'
 import { Link } from 'react-router-dom'
 import CartContext from "../../Context/CartContext"
-/* import { getDocs, collection, where, query } from 'firebase/firestore'
-import { db } from '../../services/firebase' 
-VER SI IMPORTA LOS LINKS DE IMG DESDE FIREBASE
-*/
+
 
 const NavBar = () => {
 
@@ -15,7 +11,7 @@ const NavBar = () => {
 
      return (
           <nav className='navBar bodyNav'>
-               <img src={logo} alt="logo" className='logoPrincipal' />
+               <img src="https://i.imgur.com/cqrhlWl.png" alt="logo" className='logoPrincipal' />
                <ul className='itemsNav'>
                     <li className='btn'>
                          <Link to='/' className='textoNav'> Inicio </Link>
