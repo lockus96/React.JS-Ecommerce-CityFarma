@@ -12,31 +12,6 @@ const Cart = () => {
 
      const { getTotalToPay, cart, removeItem, clear } = useContext(CartContext);
 
-     const createOrder = () =>{
-          console.log('creaste una orden')
-    
-    
-          const objOrder = {
-               buyer: {
-                    name: 'Miguel Angel Carrizo',
-                    email: 'angelmcarrizo@gmail.com',
-                    phone: '2657719222',
-                    address: 'Chacabuco 703',
-                    comment: 'Entre calle Guemes y Sarasa'
-               },
-               items: cart,
-               total: getTotalToPay()
-          }
-          console.log(objOrder)
-
-          const collectionRef = collection(db, collectionsName.orders)
-
-          addDoc(collectionRef, objOrder).then(({ id }) => {
-               console.log(`Se creó la orden con el id ${id}`)
-          })
-     }
-     
-
 
 
      return (
@@ -74,11 +49,7 @@ const Cart = () => {
                </div>
 
                <Form />           
-
-
-               <div className="btnClear">
-                         <div className="btn btn-danger finalizarCarrito" onClick={createOrder}>Finalizar Compra </div>
-                    </div>              
+             
           </div>
      )}
 
