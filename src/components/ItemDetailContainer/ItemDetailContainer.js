@@ -1,4 +1,3 @@
-/* import {getProduct} from '../../asyncmock.js' */
 import {useState, useEffect} from 'react'
 import ItemDetail from '../ItemDetail/ItemDetail.js';
 import { useParams } from 'react-router-dom';
