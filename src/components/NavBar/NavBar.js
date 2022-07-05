@@ -20,7 +20,7 @@ const NavBar = () => {
                          <Link to='/category/Instrumentos' className='textoNav'> Instrumentos </Link>
                     </li>
                     <li className='btn'>
-                         <Link to='/category/ElectronicaAudio' className='textoNav'> Electrónica </Link>
+                         <Link to='/category/Electronica' className='textoNav'> Electrónica </Link>
                     </li>
                     <li className='btn'>
                          <Link to='/category/Accesorios' className='textoNav'> Accesorios </Link>

@@ -2,21 +2,21 @@ import { useState, useEffect, useContext } from "react";
 import { addDoc, collection } from 'firebase/firestore';
 import { db, collectionsName } from '../../services/firebase'
 import CartContext from '../../Context/CartContext'
-
-
-
+import Swal from 'sweetalert2'
 
 
 const Form = () =>{
 
-     const {cart, getTotalToPay} = useContext(CartContext)
+     const {cart, getTotalToPay, clear} = useContext(CartContext)
 
     
 
      const initialValues = { 
-          username: "", 
+          nombre: "", 
           email: "", 
-          password: "" };
+          celular: "",
+          direccion: ""
+     };
 
           
      const [formValues, setFormValues] = useState(initialValues);
@@ -45,27 +45,27 @@ const Form = () =>{
   
     const errors = {};
     const regex = /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/i;
-    if (!values.username) {
-      errors.username = "Username is required!";
+    if (!values.nombre) {
+      errors.nombre = "Se necesita el nombre";
     }
     if (!values.email) {
-      errors.email = "Email is required!";
+      errors.email = "Se necesita el Email";
     } else if (!regex.test(values.email)) {
-      errors.email = "This is not a valid email format!";
+      errors.email = "El formato del Email no es correcto";
     }
-    if (!values.password) {
-      errors.password = "Password is required";
-    } else if (values.password.length < 4) {
-      errors.password = "Password must be more than 4 characters";
-    } else if (values.password.length > 10) {
-      errors.password = "Password cannot exceed more than 10 characters";
-    }
+    if (!values.celular) {
+      errors.celular = "Se necesita el celular";
+    } else if (values.celular.length < 4) {
+      errors.celular = "El celular debe tener más de 4 dígitos";
+    } 
+    if (!values.direccion) {
+     errors.direccion = "Se necesita una dirección";
+   }
     return errors;
   };
 
-  
+
   const createOrder = () => {
-     console.log('creaste una orden')
 
 
      const objOrder = {
@@ -74,64 +74,87 @@ const Form = () =>{
           items: cart,
           total: getTotalToPay()
       }
-     console.log(objOrder)
-
      const collectionRef = collection(db, collectionsName.orders)
 
      addDoc(collectionRef, objOrder).then(({ id }) => {
-          console.log(`Se creó la orden con el id ${id}`)
-     })
+          Swal.fire({
+               title: `¡Felicidades ${objOrder.cliente.nombre}! Su compra ha sido confirmada`,
+               text:`Su orden (${id}) ha sido generada. Aguarde mientras nos contactamos con usted.`,
+               icon:'success',
+           })
+   })
+   clear()
+
+     
 }
 
   
   return (
     <div className="container">
-      {Object.keys(formErrors).length === 0 && isSubmit ? (
-        <div className="ui message success">Signed in successfully</div>
-      ) : (
-        <pre>{JSON.stringify(formValues, undefined, 2)}</pre>
-      )}
 
-      <form onSubmit={handleSubmit}>
-        <h1>Login Form</h1>
-        <div className="ui divider"></div>
-        <div className="ui form">
-          <div className="field">
-            <label>Username</label>
-            <input
-              type="text"
-              name="username"
-              placeholder="Username"
-              value={formValues.username}
-              onChange={handleChange}
-            />
-          </div>
-          <p>{formErrors.username}</p>
-          <div className="field">
-            <label>Email</label>
-            <input
-              type="text"
-              name="email"
-              placeholder="Email"
-              value={formValues.email}
-              onChange={handleChange}
-            />
-          </div>
-          <p>{formErrors.email}</p>
-          <div className="field">
-            <label>Password</label>
-            <input
-              type="password"
-              name="password"
-              placeholder="Password"
-              value={formValues.password}
-              onChange={handleChange}
-            />
-          </div>
-          <p>{formErrors.password}</p>
-          <button className="fluid ui button blue">Submit</button>
-        </div>
-      </form>
+        
+          <form className="containerForm"  onSubmit={handleSubmit}>
+          <h1>Finalizar Compra</h1>
+
+               <div className=""></div>
+                    <div className="containerFields">
+
+                         <div>
+                              <label>Nombre Completo</label>
+                              <br />
+                                   <input
+                                   type="text"
+                                   name="nombre"
+                                   placeholder="Nombre"
+                                   value={formValues.nombre}
+                                   onChange={handleChange}
+                                   />
+                         </div>
+                         <p>{formErrors.nombre}</p>
+
+                         <div className="">
+                              <label>Email</label>
+                              <br />
+                                   <input
+                                   type="text"
+                                   name="email"
+                                   placeholder="Email"
+                                   value={formValues.email}
+                                   onChange={handleChange}
+                                   />
+                         </div>
+                         <p>{formErrors.email}</p>
+
+                         <div className="">
+                              <label>Celular</label>
+                              <br />
+                                   <input
+                                   type="number"
+                                   name="celular"
+                                   placeholder="Celular"
+                                   value={formValues.celular}
+                                   onChange={handleChange}
+                                   />
+                         </div>
+                         <p>{formErrors.celular}</p>
+
+                         <div className="">
+                              <label>Dirección</label>
+                              <br />
+                                   <input
+                                   type="text"
+                                   name="direccion"
+                                   placeholder="Direccion"
+                                   value={formValues.direccion}
+                                   onChange={handleChange}
+                                   />
+                         </div>
+                         <p>{formErrors.direccion}</p>
+
+                         <button className="btn btn-danger finalizarCarrito">Finalizar Compra</button>
+
+                    </div>
+          </form>
     </div>
   );
 

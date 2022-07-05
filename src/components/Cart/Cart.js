@@ -51,11 +51,7 @@ const Cart = () => {
                </div>
 
                <Form />           
-
-
-               <div className="btnClear">
-                         <div className="btn btn-danger finalizarCarrito" onClick={createOrder}>Finalizar Compra </div>
-                    </div>              
+        
           </div>
      )}
 

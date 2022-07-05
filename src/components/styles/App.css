@@ -292,7 +292,11 @@
 
 
 .container {
+     font-family: 'Montserrat', sans-serif;
+     font-size: 120%;
+     font-weight: 1000;
      display: flex !important;
+     justify-content: flex-start !important;
      flex-direction: column;
      justify-content: center;
      align-items: center;
@@ -301,22 +305,55 @@
      width: 100%;
      margin: auto;
    }
-   .container > form {
+   .container .containerForm {
      width: 70%;
      border: 1px solid #dfdfdf;
      padding: 20px;
      border-radius: 5px;
      background: #fff;
-   }
-   pre {
-     width: 70%;
-     color: #fff;
-     font-size: larger;
+     display: flex;
+     flex-direction: column;
+     flex-wrap: nowrap;
+     align-content: center;
+     justify-content: space-around;
+     align-items: center;
    }
    
    button {
-     background: #0563b4 !important;
+     background: #0562b465 !important;
+     font-family: 'Montserrat', sans-serif;
+     font-weight: 1000;
    }
    p {
      color: red;
    }
+
+.containerFields{
+     display: flex;
+     flex-direction: column;
+     flex-wrap: nowrap;
+     align-content: space-around;
+     align-items: center;
+}
+
+input{
+     font-family: 'Montserrat', sans-serif;
+     font-size: 120%;
+     font-weight: 1000;
+}
+
+
+
+
+
+
+
+     input::-webkit-outer-spin-button,
+     input::-webkit-inner-spin-button {
+
+    -webkit-appearance: none;
+    margin: 0; 
+}
+     input[type=number] {
+    -moz-appearance:textfield; 
+}    
