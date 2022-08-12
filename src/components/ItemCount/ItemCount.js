@@ -7,6 +7,7 @@ const ItemCount = ({stock, initial, onConfirm}) =>{
           setCuenta(cuenta => Math.max (cuenta - 1, initial))
      }
      const aumentar = () =>{
+     // eslint-disable-next-line
           if(!stock == 0){
                setCuenta(cuenta => Math.min (cuenta + 1, stock))
           }
