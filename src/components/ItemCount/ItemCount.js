@@ -7,7 +7,7 @@ const ItemCount = ({stock, initial, onConfirm}) =>{
           setCuenta(cuenta => Math.max (cuenta - 1, initial))
      }
      const aumentar = () =>{
-          if(!stock == 0){
+          if(!stock === 0){
                setCuenta(cuenta => Math.min (cuenta + 1, stock))
           }
      }
