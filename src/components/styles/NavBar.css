@@ -1,43 +1,16 @@
-.navBar{
-     display: flex;
-     flex-direction: row;
-     justify-content: space-between;
-     background-color: #241623f1;
-     position: fixed;
-     top: 0px;
-     width: 100%;
-     z-index: 1;
-
+* {
+     margin: 0;
+     padding: 0;
 }
+
+.navBackground {
+     background-color: black;
+}
+
 .logoPrincipal{
-     height: 60px;
-     margin-top: 9px;
-     margin-left: 10%;
+     width: 5%;
 }
 
-.cantidadCarrito{
-   display: flex;
-   flex-direction: row;  
-   margin-top: 30px;
-   margin-left: 10px;
-
-}
-
-.logoCarrito{
-     margin-top: 30%;
-     height: 50px;
-     margin-right: 10%;
-}
-
-.loginButton{
-     margin-top: 25px;
-     margin-left: 150px;
-}
-
-.carritoItem{
-     margin-left: 10px;
-     margin-right: 10%;
-}
 .itemsNav{
      width: 50%;
      margin-top: 1%;
@@ -47,50 +20,18 @@
      display: flex;
      align-items:center;
      justify-content: space-around;
-}
-
-.textoNav{
-     list-style: none !important;
-     text-decoration: none !important;
+    
      color: #fffef2fd;
      font-family: 'Montserrat', sans-serif;
      font-weight: 700;
      font-size: 20px;
 }
-.btn:hover{
-     transform: scale(1.1);
-     transition-duration: 200ms !important;
+
+.textoNav{
+     list-style: none !important;
+     text-decoration: none !important;
 }
 
-.btn{
-     transition: transform 200ms !important;
-     transition: color white 200ms !important;
-}
-
-.btn:focus,.btn:active {
-     outline: none !important;
-     box-shadow: none;
-  }
-
-.btn-outline-secondary{
-     border-color: rgba(0, 0, 0, 0) !important;
-     color: black;
-     background-color: white;
-     border-radius: 0px !important;
-     font-size: 16px;
-     font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-}
-
-a:hover {
-      color: white !important; 
- }
-
- .cantidad{
-     display: flex;
+a {
      color: white !important;
-     font-size: 25px;
-     margin-bottom: 0% !important;
-     margin-left: -5% !important;
-     margin-right: 7% !important;
-     align-items: center
- }
+}
