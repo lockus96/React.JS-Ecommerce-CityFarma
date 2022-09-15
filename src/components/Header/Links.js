@@ -15,18 +15,15 @@ const Links = () => {
                          <ul className="itemsNav">
                               <li className='li-box'>
                                    <Link to='/' className='textoNav'> Inicio </Link>
+                              </li> 
+                              <li className='li-box'>
+                                   <Link to='/category/cosechas' className='textoNav'> Cosechas </Link>
                               </li>
                               <li className='li-box'>
-                                   <Link to='/category/Instrumentos' className='textoNav'> Instrumentos </Link>
+                                   <Link to='/category/semillas' className='textoNav'> Semillas </Link>
                               </li>
                               <li className='li-box'>
-                                   <Link to='/category/Electronica' className='textoNav'> Electrónica </Link>
-                              </li>
-                              <li className='li-box'> 
-                                   <Link to='/category/Accesorios' className='textoNav'> Accesorios </Link>
-                              </li>
-                              <li className='li-box'>
-                                   <Link to='/category/DAWs' className='textoNav'> DAWs </Link>
+                                   <Link to='/category/DAWs' className='textoNav'> Nosotros </Link>
                               </li>
                               <div className='li-box-cart'>
                                    <Link to='/Cart'>
