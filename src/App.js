@@ -1,5 +1,5 @@
 import './components/styles/App.css';
-import NavBar from './components/NavBar/NavBar'
+import Header from './components/Header/Header'
 import ItemListContainer from './components/ItemListContainer/ItemListContainer';
 import ItemDetailContainer from './components/ItemDetailContainer/ItemDetailContainer';
 import './components/styles/ItemDetail.css'
@@ -14,7 +14,9 @@ function App() {
       <CartContextProvider> 
           <BrowserRouter>
             <header className="App-header">
-              <NavBar />
+
+              <Header />
+              
             </header>
               <Routes>
                   <Route path='/' element={<ItemListContainer className="d-flex flex-row bd-highlight mb-3" />} />
