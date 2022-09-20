@@ -325,14 +325,7 @@
      align-items: center;
    }
    
-   button {
-     background: #0562b465 !important;
-     font-family: 'Montserrat', sans-serif;
-     font-weight: 1000;
-   }
-   p {
-     color: red;
-   }
+  
 
 .containerFields{
      display: flex;

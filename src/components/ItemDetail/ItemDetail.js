@@ -1,6 +1,8 @@
 import ItemCount from '../ItemCount/ItemCount.js'
 import { useContext, useState } from 'react'
+import { IoMdCart } from "react-icons/io";
 import { Link } from 'react-router-dom'
+import { IconButton } from "@chakra-ui/button"
 import CartContext from '../../Context/CartContext.js'
 
 const ItemDetail = ({id, img, nombre, estado, descripcion, envioflash, precio, stock}) =>{
@@ -34,7 +36,11 @@ const ItemDetail = ({id, img, nombre, estado, descripcion, envioflash, precio, s
                                    <p className="textList">{descripcion}</p>
                                    <p className="textList">Envio flash: {envioflash}</p>
                                    <p className="textList">Precio: ${precio}</p>
-                                   { cantidad > 0 ? <div className='contadorBoxOk'> <Link to='/cart' className='contador btn btn-successAnimation'>Ir al carrito</Link> </div> : <ItemCount onConfirm={handleOnAdd} stock={stock} initial="0" />} 
+                                   { cantidad > 0 
+                                   ?    <Link to='/cart'>
+                                             <IconButton aria-label='Add to friends' icon={<IoMdCart size={30} />} /> 
+                                        </Link>
+                                   : <ItemCount onConfirm={handleOnAdd} stock={stock} initial="0" />} 
                               </div>
                          </div>
                     </section>  
