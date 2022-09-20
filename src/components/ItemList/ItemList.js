@@ -83,7 +83,7 @@ const ItemList = (props) =>{
                          color={'gray.800'}
                          fontSize={'1.2em'}>
                          <chakra.a href={'#'} display={'flex'}>
-                              <Link to={`/detail/${item.id}`}>
+                              <Link to={`/detail/${item.id}`} className="itemCart">
                                    <Icon as={FiShoppingCart} h={7} w={7} alignSelf={'center'} />
                               </Link>
                          </chakra.a>
@@ -102,25 +102,7 @@ const ItemList = (props) =>{
                     </Box>
                     </Box>
                </Flex>
-
-)})}  
-
-{/* 
-               {props.producto.map((item) => {
-               return (
-
-                    <div className="containerList">
-                         <div className="cardList">
-                              <img src={item.img} className="imgList" alt="algo" />
-                              <h5 className="titleList">{item.nombre}</h5>
-                              <p className="textList">Precio: ${item.precio}</p>
-                              Ver más
-                         </div>
-                    </div>
-               )
-               })}  
-      */}
-
+               )})} 
 
           </>
      )

@@ -2,7 +2,28 @@ import CartWidget from './CartWidget'
 import { useContext } from 'react'
 import { Link } from 'react-router-dom'
 import CartContext from "../../Context/CartContext"
+import { motion } from "framer-motion";
 
+
+const container = {
+     hidden: { opacity: 1, scale: 0 },
+     visible: {
+       opacity: 1,
+       scale: 1,
+       transition: {
+         delayChildren: 0.3,
+         staggerChildren: 0.2
+       }
+     }
+};
+
+const item = {
+     hidden: { y: 20, opacity: 0 },
+     visible: {
+       y: 0,
+       opacity: 1
+     }
+};
 
 const Links = () => {
 
@@ -10,33 +31,35 @@ const Links = () => {
 
      return (
 
-          <nav class="links-position">
 
-                         <ul className="itemsNav">
-                              <li className='li-box'>
+
+                    <motion.ul
+                    className="linksContainer"
+                    variants={container}
+                    initial="hidden"
+                    animate="visible"
+                    >
+                              <motion.li className="item" variants={item}>
                                    <Link to='/' className='textoNav'> Inicio </Link>
-                              </li> 
-                              <li className='li-box'>
+                              </motion.li> 
+                              <motion.li className="item" variants={item}>
                                    <Link to='/category/cosechas' className='textoNav'> Cosechas </Link>
-                              </li>
-                              <li className='li-box'>
+                              </motion.li>
+                              <motion.li className="item" variants={item}>
                                    <Link to='/category/semillas' className='textoNav'> Semillas </Link>
-                              </li>
-                              <li className='li-box'>
+                              </motion.li>
+                              <motion.li className="item" variants={item}>
                                    <Link to='/category/DAWs' className='textoNav'> Nosotros </Link>
-                              </li>
-                              <div className='li-box-cart'>
+                              </motion.li>
+                              <motion.li variants={item} className="cart-counter">
                                    <Link to='/Cart'>
                                         <CartWidget className='carritoItem' />
                                    </Link>
                                    <p className="cantidad">{getQuantity()}</p>
    
-                              </div>
-                            
-                         </ul>
-                
-          </nav>
-
+                              </motion.li>
+                    </motion.ul>
+               
           
      )
 }

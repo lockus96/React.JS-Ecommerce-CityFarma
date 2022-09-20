@@ -5,12 +5,16 @@
      margin: 0;
  }  
 
+ html{
+     overflow-y:scroll;
+ }
+
  body {
      background-color: antiquewhite;
  }
 
  body a{
-     color: black !important;
+     color: white ;
  }
 
 .contador{
@@ -356,6 +360,11 @@ input{
      input[type=number] {
     -moz-appearance:textfield; 
 }    
+
+.itemCart{
+     color: black !important;
+}
+
 
 @media (max-width: 1200px) {
 

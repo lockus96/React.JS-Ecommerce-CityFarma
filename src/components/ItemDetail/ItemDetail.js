@@ -38,7 +38,7 @@ const ItemDetail = ({id, img, nombre, estado, descripcion, envioflash, precio, s
                                    <p className="textList">Precio: ${precio}</p>
                                    { cantidad > 0 
                                    ?    <Link to='/cart'>
-                                             <IconButton aria-label='Add to friends' icon={<IoMdCart size={30} />} /> 
+                                             <IconButton aria-label='Hacia el carrito' icon={<IoMdCart size={30} style={{ marginTop: 10 }} />} /> 
                                         </Link>
                                    : <ItemCount onConfirm={handleOnAdd} stock={stock} initial="0" />} 
                               </div>
