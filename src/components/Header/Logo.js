@@ -7,7 +7,7 @@ const Logo = () => {
      return (
                <div className="logo-position">
                     <Link to='/'>
-                    <img src="https://i.imgur.com/8Lhgo08.png" alt="logo" style={{ width: 200, height: 200 }} />
+                    <img src="https://i.imgur.com/8Lhgo08.png" alt="logo" style={{ width: 200, height: 170 }} />
                     </Link>
                </div>
           )
