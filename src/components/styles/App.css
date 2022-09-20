@@ -5,8 +5,12 @@
      margin: 0;
  }  
 
- body{
+ body {
      background-color: antiquewhite;
+ }
+
+ body a{
+     color: black !important;
  }
 
 .contador{
@@ -17,6 +21,7 @@
      text-align: center;
 }
 
+
 .bodyAppItems{
      width: 100vw;
      height: 100vh;
@@ -25,14 +30,13 @@
 
 .grillaItems{
      display: grid;
-     grid-template-columns: 200px 200px 200px 200px;
+     grid-template-columns: 0.5fr 0.5fr 0.5fr 0.5fr;
      grid-template-rows: auto;
      width: auto;
      margin: auto;
      justify-self: center;
      justify-content: space-around;
      padding-top: 100px;
-     margin-right: 8%;
 
      row-gap: 5%;
 

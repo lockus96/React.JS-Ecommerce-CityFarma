@@ -1,3 +1,4 @@
+import { ChakraProvider } from '@chakra-ui/react'
 import './components/styles/App.css';
 import Header from './components/Header/Header'
 import ItemListContainer from './components/ItemListContainer/ItemListContainer';
@@ -11,21 +12,23 @@ function App() {
 
   return (
     <>
-      <CartContextProvider> 
-          <BrowserRouter>
-            <header className="App-header">
+     <ChakraProvider>
+          <CartContextProvider> 
+              <BrowserRouter>
+                <header className="App-header">
 
-              <Header />
-              
-            </header>
-              <Routes>
-                  <Route path='/' element={<ItemListContainer className="d-flex flex-row bd-highlight mb-3" />} />
-                  <Route path='/category/:categoryId' element={<ItemListContainer className="d-flex flex-row bd-highlight mb-3" />} />
-                  <Route path='/detail/:productId' element={<ItemDetailContainer className="d-flex flex-row bd-highlight mb-3" />} />
-                  <Route path='/cart' element={<Cart />} />
-              </Routes>
-          </BrowserRouter>
-        </CartContextProvider>
+                  <Header />
+                  
+                </header>
+                  <Routes>
+                      <Route path='/' element={<ItemListContainer className="d-flex flex-row bd-highlight mb-3" />} />
+                      <Route path='/category/:categoryId' element={<ItemListContainer className="d-flex flex-row bd-highlight mb-3" />} />
+                      <Route path='/detail/:productId' element={<ItemDetailContainer className="d-flex flex-row bd-highlight mb-3" />} />
+                      <Route path='/cart' element={<Cart />} />
+                  </Routes>
+              </BrowserRouter>
+            </CartContextProvider>
+        </ChakraProvider>
     </>
 
   );
