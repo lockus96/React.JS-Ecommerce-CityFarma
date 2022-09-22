@@ -14,12 +14,7 @@ const Header = () => {
                     <Links />
                </section>
 
-               <div className='title-style'>
-                    <h2 className='title-text'>
-                         Los calidad de una huerta, ¡más cerca que nunca!
-                    </h2>
-               </div>
-
+          
 
           </div>
 

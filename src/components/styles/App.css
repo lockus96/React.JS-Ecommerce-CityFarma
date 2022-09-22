@@ -1,4 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inconsolata:wght@200&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inconsolata:wght@200&display=swap');
 
 *{
      padding: 0;
@@ -10,7 +12,7 @@
  }
 
  body {
-     background-color: antiquewhite;
+     background-color: rgb(241, 241, 241) !important;
  }
 
  body a{
@@ -33,6 +35,16 @@
 }
 .numeroContador{
      text-align: center;
+}
+
+.productsText{
+     width: 100%;
+     height: 100%;
+     padding-top: 3rem;
+     font-family: 'Inconsolata', monospace;
+     font-style: oblique;
+     font-weight: bold;
+
 }
 
 
@@ -175,55 +187,102 @@
 
 .containerListDetail{
      width: 100%;
-     max-width: 500%;
-     height: 600px;
-     display: flex;
-     flex-wrap: wrap;
-     justify-content: center;
-     margin: auto;
+   
 }
 
-.containerListDetail .cardListDetail{
-     display: flex;
-     justify-content: space-evenly;
-     width: 800px;
-     height: 500px;
-     border-radius: 8px;
-     box-shadow: 0 2px 2px rgba(0, 0, 0, 0.2);
+.cardListDetail{
+     background-image: url('https://static.vecteezy.com/system/resources/previews/002/375/040/original/modern-white-background-free-vector.jpg');
+     background-size: cover;
+     width: 45rem;
+     height: 40rem;
+     border-radius: 20px;
+     box-shadow: 0 2px 2px rgba(0, 0, 0, 0.5);
      overflow: hidden;
-     margin: 20px;
+     margin: 10rem;
      text-align: center;
      background-color: white;
+     display: grid;
+     grid-template-columns: 0.5fr 0.5fr;
+     grid-template-rows: 0.8fr 0.2fr;
+     grid-column-gap: 0px;
+     grid-row-gap: 0px;
+     line-height: 3rem;
 
 }
 
-.containerListDetail .cardListDetail .imgListDetail{
-     margin-top: 1%;
-     width: auto !important;
+.imgListDetail{
+     width: 100% !important;
      height: 100% !important;
+     overflow: hidden;
+     grid-area: 1 / 1 / 3 / 2;
 }
 
-.containerListDetail .cardList .titleList{
-     margin-top: 15%;
-     font-weight: 700;
-}
+.imgDetail{
+     width: 120%;
+     height: 100%;
+     margin: 0 auto;}
 
-.containerListDetail .cardList .textList{
-     padding: 0 1rem;
-     font-size: 125%;
-     font-weight: 300;
-}
 
 .cardDetail{
-     display: flex;
-     flex-direction: column;
-     flex-wrap: nowrap;
-     justify-content: space-evenly;
+     grid-area: 1 / 2 / 2 / 3; 
 }
 
-.textList{
-     font-size: 125%;
-     font-weight: 300;
+.cardDetailPosition{
+     display: grid;
+     grid-template-columns: 1fr;
+     grid-template-rows: 0.2fr 0.6fr 0.1fr 0.3fr;
+     grid-column-gap: 0px;
+     grid-row-gap: 0px;
+     width: 100%;
+     height: 100%;
+     font-family: 'Inconsolata', monospace;
+
+}
+
+.titleList{
+     grid-area: 1 / 1 / 2 / 2; 
+     width: 100%;
+     height: 100%;
+     max-width: 100%;
+     height: 100%;
+     padding-top: 1.6rem;
+     font-size: 3rem;
+}
+
+.descriptionList{
+     grid-area: 2 / 1 / 3 / 2; 
+     width: 100%;
+     height: 100%;
+     max-width: 100%;
+     height: 100%;
+     font-size: 1.7rem;
+
+}
+
+.shippingList{
+     grid-area: 3 / 1 / 4 / 2; 
+     width: 100%;
+     height: 100%;
+     max-width: 100%;
+     height: 100%;
+     font-size: 1rem;
+
+
+}
+
+.priceList{
+     grid-area: 4 / 1 / 5 / 2;
+     width: 100%;
+     height: 100%;
+     max-width: 100%;
+     height: 100%;
+     font-size: 3rem;
+
+}
+
+
+.iconsDetail{
+     grid-area: 2 / 2 / 3 / 3; 
 }
 
 

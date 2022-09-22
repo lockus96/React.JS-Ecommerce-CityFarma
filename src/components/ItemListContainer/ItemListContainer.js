@@ -23,6 +23,9 @@ const ItemListContainer = () =>{
           ? query (collection(db, 'products'), where('categoria', '==', categoryId))
           : collection(db, 'products')
 
+
+          //In case of being on main page, set 'home' on true
+          //Wich in this case, will change className on items on display
           // eslint-disable-next-line
           if(location.pathname == '/' ||location.pathname == '' ){
                setHome(true)
