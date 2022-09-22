@@ -1,6 +1,6 @@
 import CartWidget from './CartWidget'
 import { useContext } from 'react'
-import { Link } from 'react-router-dom'
+import { NavLink } from 'react-router-dom'
 import CartContext from "../../Context/CartContext"
 import { motion } from "framer-motion";
 
@@ -40,21 +40,21 @@ const Links = () => {
                     animate="visible"
                     >
                               <motion.li className="item" variants={item}>
-                                   <Link to='/' className='textoNav'> Inicio </Link>
+                                   <NavLink activeclassname="true" to='/' className='textoNav'> Inicio </NavLink >
                               </motion.li> 
                               <motion.li className="item" variants={item}>
-                                   <Link to='/category/cosechas' className='textoNav'> Cosechas </Link>
+                                   <NavLink activeclassname="true" to='/category/cosechas' className='textoNav'> Cosechas </NavLink >
                               </motion.li>
                               <motion.li className="item" variants={item}>
-                                   <Link to='/category/semillas' className='textoNav'> Semillas </Link>
+                                   <NavLink activeclassname="true" to='/category/semillas' className='textoNav'> Semillas </NavLink >
                               </motion.li>
                               <motion.li className="item" variants={item}>
-                                   <Link to='/category/DAWs' className='textoNav'> Nosotros </Link>
+                                   <NavLink activeclassname="true" to='/category/DAWs' className='textoNav'> Nosotros </NavLink >
                               </motion.li>
                               <motion.li variants={item} className="cart-counter">
-                                   <Link to='/Cart'>
+                                   <NavLink  to='/Cart'>
                                         <CartWidget className='carritoItem' />
-                                   </Link>
+                                   </NavLink >
                                    <p className="cantidad">{getQuantity()}</p>
    
                               </motion.li>
