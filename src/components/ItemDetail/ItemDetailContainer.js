@@ -1,6 +1,5 @@
-/* import {getProduct} from '../../asyncmock.js' */
 import {useState, useEffect} from 'react'
-import ItemDetail from '../ItemDetail/ItemDetail.js';
+import ItemDetail from './ItemDetail.js';
 import { useParams } from 'react-router-dom';
 import { getDoc, doc } from 'firebase/firestore'
 import { db } from '../../services/firebase'

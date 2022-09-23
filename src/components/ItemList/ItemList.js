@@ -102,8 +102,9 @@ const ItemList = (props) =>{
                     </Box>
                     </Box>
                </Flex>
-               )})} 
 
+
+          )})}
           </>
      )
 }

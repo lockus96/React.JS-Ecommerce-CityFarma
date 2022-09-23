@@ -1,5 +1,5 @@
 import {useState, useEffect} from 'react'
-import ItemList from '../ItemList/ItemList';
+import ItemList from './ItemList';
 import { getDocs, collection, where, query } from 'firebase/firestore'
 import { db } from '../../services/firebase'
 import { useParams, useLocation } from 'react-router-dom';
@@ -24,8 +24,8 @@ const ItemListContainer = () =>{
           : collection(db, 'products')
 
 
-          //In case of being on main page, set 'home' on true
-          //Wich in this case, will change className on items on display
+          //In case of being on the main page, set 'home' on true
+          //In that case, it will change className on items on display
           // eslint-disable-next-line
           if(location.pathname == '/' ||location.pathname == '' ){
                setHome(true)
