@@ -9,7 +9,7 @@ import Form from "../Form/Form";
 
 const Cart = () => {
 
-     const { getTotalToPay, cart, removeItem, clear, createOrder } = useContext(CartContext);
+     const { getTotalToPay, cart, removeItem, clear } = useContext(CartContext);
 
      
      
