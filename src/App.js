@@ -9,6 +9,7 @@ import { CartContextProvider } from './Context/CartContext';
 import Cart from './components/Cart/Cart';
 import Text from './components/Text/Text';
 import Articles from './components/Articles/ArticlesContainer';
+import Footer from './components/Footer/Footer';
 
 function App() {
 
@@ -28,6 +29,10 @@ function App() {
                       <Route path='/detail/:productId' element={<ItemDetailContainer/>} />
                       <Route path='/cart' element={<Cart />} />
                   </Routes>
+
+                  <footer>
+                    <Footer />
+                  </footer>
               </BrowserRouter>
             </CartContextProvider>
         </ChakraProvider>

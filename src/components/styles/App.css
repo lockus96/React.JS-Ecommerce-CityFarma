@@ -19,6 +19,17 @@
      color: white ;
  }
 
+.footerStyle{
+     background-color: rgb(234, 234, 255) !important;
+}
+
+.footerStylePosition{
+     padding-top: 2rem;
+}
+
+.footerIcons{
+     color: black;
+}
 
 .grillaHome{
      display: flex;
