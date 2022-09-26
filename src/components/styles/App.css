@@ -1,55 +1,128 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inconsolata:wght@200&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inconsolata:wght@200&display=swap');
 
-*{
+* {
      padding: 0;
      margin: 0;
- }  
+}
 
- body{
-     background-image: url("https://i.imgur.com/aVR6KWv.png");
- }
+html {
+     overflow-y: scroll;
+     overflow-x: hidden;
+}
 
-.contador{
+body {
+     background-color: rgb(241, 241, 241) !important;
+}
+
+body a {
+     color: white;
+}
+
+
+
+
+.cardsContainer {
+     width: 100%;
+     list-style: none;
+     text-decoration: none;
+     display: flex;
+     align-items: center;
+     justify-content: space-around;
+     color: #000000fd;
+     font-family: 'Montserrat', sans-serif;
+     font-weight: 700;
+     font-size: 1.3rem;
+}
+
+
+.loadingScreenStyle {
+     max-width: 100vw;
+     width: 100vw;
+     display: flex;
+     flex-wrap: nowrap;
+     justify-content: center;
+     align-items: center;
+
+}
+
+.footerStyle {
+     margin-top: 4rem !important;
+     background-color: rgb(234, 234, 255) !important;
+}
+
+.footerStylePosition {
+     padding-top: 1.5rem;
+}
+
+.footerIcons {
+     color: black;
+}
+
+.grillaHome {
+     display: flex;
+}
+
+.active {
+     text-shadow: 1px 1px 10px rgba(255, 255, 255, 1);
+
+}
+
+.contador {
      width: 200px;
      align-items: center;
 }
-.numeroContador{
+
+.numeroContador {
      text-align: center;
 }
 
-.bodyAppItems{
+.productsText {
+     width: 100%;
+     height: 100%;
+     padding-top: 3rem;
+     font-family: 'Inconsolata', monospace;
+     font-style: oblique;
+     font-weight: bold;
+
+}
+
+
+.bodyAppItems {
      width: 100vw;
      height: 100vh;
 
 }
 
-.grillaItems{
+.grillaItems {
      display: grid;
-     grid-template-columns: 200px 200px 200px 200px;
-     grid-template-rows: 600px 600px 600px 600px;
+     grid-template-columns: 0.5fr 0.5fr 0.5fr 0.5fr;
+     grid-template-rows: auto;
      width: auto;
      margin: auto;
      justify-self: center;
      justify-content: space-around;
-     margin-top: 3%;
+     padding-top: 100px;
+
      row-gap: 5%;
 
 }
 
-.body-cards{
+.body-cards {
      height: 100vh;
      display: grid;
      justify-content: center;
      margin-top: 3%;
 }
 
-.overlay{
+.overlay {
      width: 250px;
      height: 400px;
 }
 
 
-.cartItems{
+.cartItems {
      width: 25% !important;
      height: 25% !important;
      display: flex;
@@ -63,7 +136,7 @@
 
 }
 
-.carritoText{
+.carritoText {
      font-family: 'Montserrat', sans-serif;
      font-size: 300%;
      color: rgba(216, 243, 97, 0.774);
@@ -71,18 +144,18 @@
      margin-top: 5%;
 }
 
-.imgCart{
+.imgCart {
      width: 150px;
      height: 250px;
      grid-area: 1 / 1 / 2 / 2;
      margin-right: -2% !important;
 }
 
-.imgContainer{
+.imgContainer {
      margin-left: -10% !important;
 }
 
-.textItemCart{
+.textItemCart {
      font-family: 'Montserrat', sans-serif;
      font-size: 120%;
      color: rgba(0, 0, 0, 0.774);
@@ -90,24 +163,36 @@
      margin-top: 5%;
 }
 
-.btnClear{
+.btnClear {
      display: flex !important;
      justify-content: center;
      margin-top: 75px !important;
 }
 
+.btnDelete{
+     margin-top: 2rem;
+     margin-bottom: 5rem;
 
-.carritoVacioTitle{
+     display: flex;
+     flex-direction: row;
+     flex-wrap: nowrap;
+     justify-content: center;
+}
+
+
+.carritoVacioTitle {
      display: flex;
      justify-content: center;
      align-items: center;
      font-family: 'Montserrat', sans-serif;
-     font-size: 300%;
-     margin-top: 20%;
+     font-size: 5rem;
+     padding-top: 15%;
+     padding-bottom: 10%;
+
 
 }
 
-.containerList{
+.containerList {
      width: 150%;
      max-width: 1200px;
      height: 430px;
@@ -117,7 +202,7 @@
      margin: auto;
 }
 
-.containerList .cardList{
+.containerList .cardList {
      width: 330px;
      height: 430px;
      border-radius: 8px;
@@ -130,169 +215,239 @@
 
 }
 
-.containerList .cardList:hover{
+.containerList .cardList:hover {
      transform: translateY(-15px);
      box-shadow: 0 12px 16px rgba(0, 0, 0, 0.2);
 
 }
 
-.containerList .cardList .imgList{
+.containerList .cardList .imgList {
      margin-top: 6%;
      width: auto !important;
      height: 50% !important;
 }
 
-.containerList .cardList .titleList{
+.containerList .cardList .titleList {
      margin-top: 15%;
      font-weight: 700;
 }
 
-.containerList .cardList .textList{
+.containerList .cardList .textList {
      padding: 0 1rem;
      font-size: 125%;
      font-weight: 300;
 }
 
-.containerListDetail{
+.containerListDetail {
      width: 100%;
-     max-width: 500%;
-     height: 600px;
-     display: flex;
-     flex-wrap: wrap;
-     justify-content: center;
-     margin: auto;
+
 }
 
-.containerListDetail .cardListDetail{
-     display: flex;
-     justify-content: space-evenly;
-     width: 800px;
-     height: 500px;
-     border-radius: 8px;
-     box-shadow: 0 2px 2px rgba(0, 0, 0, 0.2);
+.cardListDetail {
+     background-image: url('https://static.vecteezy.com/system/resources/previews/002/375/040/original/modern-white-background-free-vector.jpg');
+     background-size: cover;
+     width: 45rem;
+     height: 40rem;
+     border-radius: 20px;
+     box-shadow: 0 2px 2px rgba(0, 0, 0, 0.5);
      overflow: hidden;
-     margin: 20px;
+     margin: 10rem;
      text-align: center;
      background-color: white;
+     display: grid;
+     grid-template-columns: 0.5fr 0.5fr;
+     grid-template-rows: 0.8fr 0.2fr;
+     grid-column-gap: 0px;
+     grid-row-gap: 0px;
+     line-height: 3rem;
 
 }
 
-.containerListDetail .cardListDetail .imgListDetail{
-     margin-top: 1%;
-     width: auto !important;
+.imgListDetail {
+     width: 100% !important;
      height: 100% !important;
+     overflow: hidden;
+     grid-area: 1 / 1 / 3 / 2;
 }
 
-.containerListDetail .cardList .titleList{
-     margin-top: 15%;
-     font-weight: 700;
+.imgDetail {
+     width: 120%;
+     height: 100%;
+     margin: 0 auto;
 }
 
-.containerListDetail .cardList .textList{
-     padding: 0 1rem;
-     font-size: 125%;
-     font-weight: 300;
+
+.cardDetail {
+     grid-area: 1 / 2 / 2 / 3;
 }
 
-.cardDetail{
+.cardDetailPosition {
+     display: grid;
+     grid-template-columns: 1fr;
+     grid-template-rows: 0.2fr 0.6fr 0.1fr 0.3fr;
+     grid-column-gap: 0px;
+     grid-row-gap: 0px;
+     width: 100%;
+     height: 100%;
+     font-family: 'Inconsolata', monospace;
+
+}
+
+.titleList {
+     grid-area: 1 / 1 / 2 / 2;
+     width: 100%;
+     height: 100%;
+     max-width: 100%;
+     height: 100%;
+     padding-top: 1.6rem;
+     font-size: 3rem;
+}
+
+.descriptionList {
+     grid-area: 2 / 1 / 3 / 2;
+     width: 100%;
+     height: 100%;
+     max-width: 100%;
+     height: 100%;
+     font-size: 1.7rem;
+
+}
+
+.shippingList {
+     grid-area: 3 / 1 / 4 / 2;
+     width: 100%;
+     height: 100%;
+     max-width: 100%;
+     height: 100%;
+     font-size: 1rem;
+
+
+}
+
+.priceList {
+     grid-area: 4 / 1 / 5 / 2;
+     width: 100%;
+     height: 100%;
+     max-width: 100%;
+     height: 100%;
+     font-size: 3rem;
+
+}
+
+
+.iconsDetail {
+     grid-area: 2 / 2 / 3 / 3;
+}
+
+
+
+
+.cartCardsContainer{
+     width: 25%;
+     list-style: none;
+     text-decoration: none;
      display: flex;
-     flex-direction: column;
-     flex-wrap: nowrap;
-     justify-content: space-evenly;
+     align-items: center;
+     justify-content: space-around;
+     color: #000000fd;
+     font-family: 'Montserrat', sans-serif;
+     font-weight: 700;
+     font-size: 1.3rem; 
+}
+
+
+
+
+
+.cartList {
+     width: auto;
+     height: auto;
+}
+
+
+
+.grillaCart {
+     margin-top: 5%;
+     display: flex;
+     flex-wrap: wrap;
+     flex-direction: row;
+     justify-content: center;
+}
+
+
+.cardList {
+     max-width: 100%;
+     width: 40%;
+
+     border: 1px rgba(0, 0, 0, 0.137) solid;
+     border-radius: 0 0 30px 30px;
+     color: #000000fd;
+     font-family: 'Montserrat', sans-serif;
+     font-weight: 700;
+     font-size: 1.3rem;
+    
+     display: grid;
+     grid-template-columns: 1fr;
+     grid-template-rows: 2fr 1fr;
+     grid-column-gap: 0px;
+     grid-row-gap: 0px;
+
+     z-index: 5;
+
+}
+
+
+
+.cartList .cardList .imgList {
+     grid-area: 1 / 1 / 2 / 2;
+     z-index: -1;
 }
 
 .textList{
-     font-size: 125%;
-     font-weight: 300;
-}
-
-
-
-
-
-
-
-
-
-
-.cartList{
-     width: 250%;
-     max-width: 1200px;
-     max-height: 300px;
-     height: 300px;     
-     display: flex;
-     flex-wrap: wrap;
-     justify-content: center;
-     margin: auto;
-}
-
-.cartList .cardList{
-     display: flex;
-     flex-direction: row;
-    flex-wrap: nowrap;
-    align-content: center;
-    justify-content: center;
-    align-items: center;
-     width: 50%;
-     height: 80%;
-     border-radius: 8px;
-     box-shadow: 0 2px 2px rgba(0, 0, 0, 0.2);
-     overflow: hidden;
-     margin: 0px;
-     text-align: center;
-     transition: all 0.25s;
-     background-color: white;
-
-}
-
-
-
-.cartList .cardList .imgList{
-     margin-top: 6%;
-     width: auto !important;
-     height: 75% !important;
-}
-
-
-.grillaCart{
-     
-     width: auto;
-     margin: auto;
-     justify-self: center;
+     grid-area: 2 / 1 / 3 / 2; 
+     display: grid;
+     align-content: stretch;
      justify-content: space-around;
-     margin-top: 3%;
-     row-gap: 5%;
+     align-items: center;
+     justify-items: center;
 }
 
-.borrarCarrito{
-     margin-top: 5%;
+
+.finalizarCarrito {
+     padding-top: 5%;
+     padding-bottom: 5%;
 }
 
-.finalizarCarrito{
-     margin-bottom: 2%;
+.finalizarCarrito:hover{
+     transition: 0.5s;
+     scale: 1.3;
 }
-.cartBody{
+
+.cartBody {
      margin-top: -1%;
      height: 100%;
 }
 
-.totalText{
+.totalText {
      display: flex;
      justify-content: center;
      align-items: center;
      font-family: 'Montserrat', sans-serif;
-     font-size: 300%;
      margin-top: 3%;
+     font-size: 5rem;
 }
 
-.itemEmpty{
+.itemEmpty {
      height: 5%;
 }
 
-
+.formErrors{
+     height: 2.2rem;
+}
 
 .container {
      font-family: 'Montserrat', sans-serif;
+     color: white;
      font-size: 120%;
      font-weight: 1000;
      display: flex !important;
@@ -300,35 +455,29 @@
      flex-direction: column;
      justify-content: center;
      align-items: center;
-     height: 100vh;
+     height: 100%;
      max-width: 500px;
      width: 100%;
      margin: auto;
-   }
-   .container .containerForm {
-     width: 70%;
-     border: 1px solid #dfdfdf;
+}
+
+.container .containerForm {
+     width: 50%;
+     border: 1px solid #0000003a;
      padding: 20px;
-     border-radius: 5px;
-     background: #fff;
+     border-radius: 20px;
+     background-image: url('https://static.vecteezy.com/system/resources/previews/001/872/837/non_2x/abstract-dark-blue-geometric-polygonal-form-background-vector.jpg');
      display: flex;
      flex-direction: column;
      flex-wrap: nowrap;
      align-content: center;
      justify-content: space-around;
      align-items: center;
-   }
-   
-   button {
-     background: #0562b465 !important;
-     font-family: 'Montserrat', sans-serif;
-     font-weight: 1000;
-   }
-   p {
-     color: red;
-   }
+}
 
-.containerFields{
+
+
+.containerFields {
      display: flex;
      flex-direction: column;
      flex-wrap: nowrap;
@@ -336,7 +485,7 @@
      align-items: center;
 }
 
-input{
+input {
      font-family: 'Montserrat', sans-serif;
      font-size: 120%;
      font-weight: 1000;
@@ -348,12 +497,71 @@ input{
 
 
 
-     input::-webkit-outer-spin-button,
-     input::-webkit-inner-spin-button {
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
 
-    -webkit-appearance: none;
-    margin: 0; 
+     -webkit-appearance: none;
+     margin: 0;
 }
-     input[type=number] {
-    -moz-appearance:textfield; 
-}    
+
+input[type=number] {
+     -moz-appearance: textfield;
+}
+
+.itemCart {
+     color: black !important;
+}
+
+
+@media (max-width: 1200px) {
+
+     .grillaItems {
+          display: grid;
+          grid-template-columns: 200px 200px 200px;
+          grid-template-rows: auto;
+          width: auto;
+          margin: auto;
+          justify-self: center;
+          justify-content: space-around;
+          margin-top: 3%;
+          margin-right: 8%;
+
+          row-gap: 5%;
+
+     }
+
+
+}
+
+@media (max-width: 920px) {
+
+     .grillaItems {
+          display: grid;
+          grid-template-columns: 200px 200px;
+          grid-template-rows: auto;
+          width: auto;
+          margin: auto;
+          justify-self: center;
+          justify-content: space-around;
+          margin-top: 3%;
+          margin-right: 8%;
+
+          row-gap: 5%;
+
+     }
+
+
+}
+
+@media (max-width: 600px) {
+
+     .grillaItems {
+          display: grid;
+          grid-template-columns: 200px;
+          align-content: center;
+          justify-content: space-around;
+          margin-right: 25%;
+     }
+
+
+}

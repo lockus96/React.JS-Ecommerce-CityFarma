@@ -1,8 +1,9 @@
 import {useState, useEffect} from 'react'
-import ItemDetail from '../ItemDetail/ItemDetail.js';
+import ItemDetail from './ItemDetail.js';
 import { useParams } from 'react-router-dom';
 import { getDoc, doc } from 'firebase/firestore'
 import { db } from '../../services/firebase'
+import LoadingScreen from '../Loading Screen/LoadingScreen.js';
 
 const ItemDetailContainer = () =>{
 
@@ -26,7 +27,7 @@ const ItemDetailContainer = () =>{
      return (
           producto !== undefined ? 
               <ItemDetail {...producto} />
-              : <h2>Espere por favor...</h2>
+              : <LoadingScreen />
      )
 }
 export default ItemDetailContainer

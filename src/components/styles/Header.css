@@ -1,0 +1,107 @@
+* {
+     margin: 0;
+     padding: 0;
+}
+
+
+.cartIcon{
+     width: 50px;
+     height: 50px;
+}
+
+.headerStyle{
+     background-image: linear-gradient(98deg,rgba(0,0,0,1),rgba(0,0,0,.2)),url(https://i.imgur.com/hglMcpF.jpg);
+     background-position: 50%;
+     height: 35rem;
+     padding: 5rem 0;
+
+}
+
+.nav-style{
+     display: grid;
+     grid-template-columns: 0.4fr 0.6fr;
+     grid-template-rows: 1fr;
+     grid-column-gap: 0px;
+     grid-row-gap: 0px;
+}
+
+
+.cart-counter{
+     display: flex;
+}
+
+.textoNav{
+     font-family: 'Inconsolata', monospace;
+     
+     list-style: none !important;
+     text-decoration: none !important;
+     font-weight: bold;
+     -webkit-text-stroke-width: 25px rgb(0, 0, 0);
+     text-shadow: 0 0 5px rgb(0, 0, 0);
+
+}
+
+
+.textoNav:hover{
+     color: rgb(202, 202, 202) !important;
+     transition: 0.2s !important;
+}
+
+a {
+     color: white !important;
+}
+
+.cantidad{
+     color: white;
+     font-size: 1.8rem;
+     margin: 0% !important;
+     margin-right: 0.5rem;
+     margin-left: 0.3rem;
+     display: flex;
+     align-items: center;
+}
+
+.li-box{
+    display: block;
+    padding: 0.6rem;
+}
+
+.li-box-cart{
+     display: flex;
+     padding: 0.6rem;
+
+}
+
+.logo-position{
+     padding-left: 5rem;
+}
+
+.title-text{
+     font-family: 'Inconsolata', monospace;
+     font-weight: lighter;
+     font-style: oblique;
+     color: white;
+     font-size: 2rem;
+}
+
+.title-style{
+     padding-top: 2rem;
+     padding-left: 1rem;
+     display: flex;
+     flex-direction: row;
+     justify-content: flex-start;
+
+}
+
+.linksContainer{
+     width: 100%;
+     list-style: none;
+     text-decoration: none;
+     display: flex;
+     align-items:center;
+     justify-content: space-around;
+     color: #fffef2fd;
+     font-family: 'Montserrat', sans-serif;
+     font-weight: 700;
+     font-size: 1.3rem;
+}

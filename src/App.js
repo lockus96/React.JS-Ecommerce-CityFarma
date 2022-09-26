@@ -1,29 +1,40 @@
+import { ChakraProvider } from '@chakra-ui/react'
 import './components/styles/App.css';
-import NavBar from './components/NavBar/NavBar'
-import ItemListContainer from './components/ItemListContainer/ItemListContainer';
-import ItemDetailContainer from './components/ItemDetailContainer/ItemDetailContainer';
+import Header from './components/Header/Header'
+import ItemListContainer from './components/ItemList/ItemListContainer';
+import ItemDetailContainer from './components/ItemDetail/ItemDetailContainer';
 import './components/styles/ItemDetail.css'
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import { CartContextProvider } from './Context/CartContext';
 import Cart from './components/Cart/Cart';
+import Text from './components/Text/Text';
+import Articles from './components/Articles/ArticlesContainer';
+import Footer from './components/Footer/Footer'
 
 function App() {
 
   return (
     <>
-      <CartContextProvider> 
-          <BrowserRouter>
-            <header className="App-header">
-              <NavBar />
-            </header>
-              <Routes>
-                  <Route path='/' element={<ItemListContainer className="d-flex flex-row bd-highlight mb-3" />} />
-                  <Route path='/category/:categoryId' element={<ItemListContainer className="d-flex flex-row bd-highlight mb-3" />} />
-                  <Route path='/detail/:productId' element={<ItemDetailContainer className="d-flex flex-row bd-highlight mb-3" />} />
-                  <Route path='/cart' element={<Cart />} />
-              </Routes>
-          </BrowserRouter>
-        </CartContextProvider>
+     <ChakraProvider>
+          <CartContextProvider> 
+              <BrowserRouter>
+                <header className="App-header">
+
+                  <Header />
+                  
+                </header>
+                  <Routes>
+                      <Route path='/' element={<> <Text/> <ItemListContainer/> <Articles/> </>} />  
+                      <Route path='/category/:categoryId' element={<ItemListContainer/>} />
+                      <Route path='/detail/:productId' element={<ItemDetailContainer/>} />
+                      <Route path='/cart' element={<Cart />} />
+                  </Routes>
+                <footer>
+                  <Footer />
+                </footer>
+              </BrowserRouter>
+            </CartContextProvider>
+        </ChakraProvider>
     </>
 
   );

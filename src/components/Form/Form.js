@@ -111,7 +111,7 @@ const Form = () =>{
                                    onChange={handleChange}
                                    />
                          </div>
-                         <p>{formErrors.nombre}</p>
+                         <p className="formErrors">{formErrors.nombre}</p>
 
                          <div className="">
                               <label>Email</label>
@@ -124,7 +124,7 @@ const Form = () =>{
                                    onChange={handleChange}
                                    />
                          </div>
-                         <p>{formErrors.email}</p>
+                         <p className="formErrors">{formErrors.email}</p>
 
                          <div className="">
                               <label>Celular</label>
@@ -137,7 +137,7 @@ const Form = () =>{
                                    onChange={handleChange}
                                    />
                          </div>
-                         <p>{formErrors.celular}</p>
+                         <p className="formErrors">{formErrors.celular}</p>
 
                          <div className="">
                               <label>Dirección</label>
@@ -150,9 +150,10 @@ const Form = () =>{
                                    onChange={handleChange}
                                    />
                          </div>
-                         <p>{formErrors.direccion}</p>
+                         <p className="formErrors">{formErrors.direccion}</p>
 
-                         <button className="btn btn-danger finalizarCarrito">Finalizar Compra</button>
+
+                         <button className="finalizarCarrito">Finalizar Compra</button>
 
                     </div>
           </form>

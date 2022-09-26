@@ -1,3 +1,7 @@
+import { WrapItem } from '@chakra-ui/react'
+import { Button, ButtonGroup } from "@chakra-ui/button"
+import { FiChevronDown, FiChevronUp, FiCheck } from "react-icons/fi";
+import { Text }  from '@chakra-ui/react';
 import { useState } from "react";
 
 const ItemCount = ({stock, initial, onConfirm}) =>{
@@ -19,14 +23,26 @@ const ItemCount = ({stock, initial, onConfirm}) =>{
      
      return (
           <div className="contadorBox">
-               <div className="containerBoton">
-                    <div className="btn-contador">
-                    <button className="btn btn-outline-dark" onClick={disminuir}> - </button>
-                    <h5 className="card-title numeroContador">{cuenta}</h5>
-                    <button className="btn btn-outline-dark" onClick={aumentar}> + </button>
-                    </div>
-                    <div className="btn btn-success btn-position" onClick={agregarTotal}> Agregar </div>
-               </div>
+                    <WrapItem>
+
+                         <ButtonGroup size='sm' isAttached variant='outline'>
+                              <Button>
+                                   <FiChevronDown size={30} onClick={disminuir} />
+                              </Button>
+                              <Text style={{ width: 60 }}>
+                                   <h5 className="card-title numeroContador">{cuenta}</h5>
+                              </Text>
+                              <Button>
+                              <FiChevronUp size={30} onClick={aumentar} />
+                                   </Button>
+                         </ButtonGroup>
+               
+                    </WrapItem>
+                    <WrapItem> 
+                         <Button>
+                             <FiCheck size={30} onClick={agregarTotal} />
+                         </Button>
+                    </WrapItem>
           </div> 
 
           
