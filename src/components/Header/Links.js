@@ -48,12 +48,9 @@ const Links = () => {
                               <motion.li className="item" variants={item}>
                                    <NavLink activeclassname="true" to='/category/semillas' className='textoNav'> Semillas </NavLink >
                               </motion.li>
-                              <motion.li className="item" variants={item}>
-                                   <NavLink activeclassname="true" to='/category/DAWs' className='textoNav'> Nosotros </NavLink >
-                              </motion.li>
                               <motion.li variants={item} className="cart-counter">
                                    <NavLink  to='/Cart'>
-                                        <CartWidget className='carritoItem' />
+                                        <CartWidget/>
                                    </NavLink >
                                    <p className="cantidad">{getQuantity()}</p>
    

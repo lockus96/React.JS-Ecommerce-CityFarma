@@ -151,7 +151,8 @@ const Form = () =>{
                          </div>
                          <p>{formErrors.direccion}</p>
 
-                         <button className="btn btn-danger finalizarCarrito">Finalizar Compra</button>
+
+                         <button className="finalizarCarrito">Finalizar Compra</button>
 
                     </div>
           </form>

@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom'
 import { IconButton } from "@chakra-ui/button"
 import CartContext from '../../Context/CartContext.js'
 
-const ItemDetail = ({id, img, nombre, estado, descripcion, envioflash, precio, stock}) =>{
+const ItemDetail = ({id, img, nombre, descripcion, envioflash, precio, stock}) =>{
 
 
 
