@@ -441,7 +441,9 @@ body a {
      height: 5%;
 }
 
-
+.formErrors{
+     height: 2.2rem;
+}
 
 .container {
      font-family: 'Montserrat', sans-serif;
