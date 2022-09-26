@@ -61,7 +61,8 @@ const ItemListContainer = () => {
 
      return (
           <div className={home ? 'grillaHome' : 'grillaItems'} >
-               {productosIniciales == 0 ? <LoadingScreen /> : <ItemList producto={productos} />
+               {// eslint-disable-next-line 
+               productosIniciales == 0 ? <LoadingScreen /> : <ItemList producto={productos} />
                }
 
           </div>

@@ -1,7 +1,7 @@
 import { useContext } from "react";
 import CartContext from "../../Context/CartContext";
 import Form from "../Form/Form";
-import { Button, ButtonProps, Flex, useColorModeValue, Circle, Box, Image, Badge, Text, Icon, chakra, Tooltip } from '@chakra-ui/react';
+import { Button, Flex, Circle, Box, Image, Text, Icon, chakra, Tooltip } from '@chakra-ui/react';
 import { FaBan } from 'react-icons/fa';
 import { motion } from "framer-motion"
 
