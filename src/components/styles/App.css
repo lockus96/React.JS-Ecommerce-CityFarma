@@ -24,7 +24,6 @@ body a {
 
 
 .cardsContainer {
-     width: 100%;
      list-style: none;
      text-decoration: none;
      display: flex;
@@ -61,6 +60,7 @@ body a {
 
 .grillaHome {
      display: flex;
+     justify-content: space-around;
 }
 
 .active {
@@ -95,17 +95,11 @@ body a {
 }
 
 .grillaItems {
-     display: grid;
-     grid-template-columns: 0.5fr 0.5fr 0.5fr 0.5fr;
-     grid-template-rows: auto;
-     width: auto;
-     margin: auto;
-     justify-self: center;
-     justify-content: space-around;
+     display: flex;
      padding-top: 100px;
-
-     row-gap: 5%;
-
+     flex-wrap: wrap;
+     flex-direction: row;
+     justify-content: space-evenly;
 }
 
 .body-cards {
@@ -488,6 +482,7 @@ input {
      font-family: 'Montserrat', sans-serif;
      font-size: 120%;
      font-weight: 1000;
+     color: black !important;
 }
 
 
@@ -526,20 +521,7 @@ input[type=number] {
 
 @media (max-width: 1200px) {
 
-     .grillaItems {
-          display: grid;
-          grid-template-columns: 200px 200px 200px;
-          grid-template-rows: auto;
-          width: auto;
-          margin: auto;
-          justify-self: center;
-          justify-content: space-around;
-          margin-top: 3%;
-          margin-right: 8%;
 
-          row-gap: 5%;
-
-     }
 
      .grillaHome {
           display: grid;
@@ -570,20 +552,7 @@ input[type=number] {
 
 @media (max-width: 920px) {
 
-     .grillaItems {
-          display: grid;
-          grid-template-columns: 200px 200px;
-          grid-template-rows: auto;
-          width: auto;
-          margin: auto;
-          justify-self: center;
-          justify-content: space-around;
-          margin-top: 3%;
-          margin-right: 8%;
-
-          row-gap: 5%;
-
-     }
+     
 
      .headerStyle {
           background-image: linear-gradient(98deg,rgba(0,0,0,1),rgba(0,0,0,.2)),url(https://i.imgur.com/hglMcpF.jpg);
@@ -594,6 +563,19 @@ input[type=number] {
 
 }
 
+@media (max-width: 780px){
+
+     .css-1xbi2oa{
+          display: flex !important; 
+          flex-direction: row;
+     }
+
+     .containerForm{
+          width: 100% !important;
+          margin-bottom: 2rem;
+     }
+
+}
 @media (max-width: 705px){
      .logoSize{
           width: 75%;
