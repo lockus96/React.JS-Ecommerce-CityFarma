@@ -44,15 +44,16 @@ const ItemDetail = ({id, img, nombre, descripcion, envioflash, precio, stock}) =
                                         <div className="priceList">
                                              <p>Precio: ${precio}</p>
                                         </div>
-                                   </div>
-                              </div>
-                              <div className='iconsDetail'>
+                                        <div className='iconsDetail'>
                                    { cantidad > 0 
                                    ?    <Link to='/cart'>
                                              <IconButton aria-label='Hacia el carrito' icon={<IoMdCart size={30} style={{ marginTop: 10, color: "black"  }} />} /> 
                                         </Link>
                                    :    <ItemCount onConfirm={handleOnAdd} stock={stock} initial="0" />} 
                               </div>
+                                   </div>
+                              </div>
+                             
                          </div>
                     </section>  
           </div>

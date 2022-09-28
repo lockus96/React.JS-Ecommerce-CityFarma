@@ -15,7 +15,7 @@ const Logo = () => {
             delay: 0.5,
             ease: [0, 0.71, 0.2, 1.01]
           }}>
-                    <div className="logo-position" style={{ width: 250 }}>
+                    <div className="logo-position" style={{ width: 200 }}>
                          <Link to='/'>
                          <img src="https://i.imgur.com/8Lhgo08.png" alt="logo" className='logoSize'  />
                          </Link>
