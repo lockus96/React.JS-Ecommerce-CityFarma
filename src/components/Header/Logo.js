@@ -17,7 +17,7 @@ const Logo = () => {
           }}>
                     <div className="logo-position" style={{ width: 250 }}>
                          <Link to='/'>
-                         <img src="https://i.imgur.com/8Lhgo08.png" alt="logo"  />
+                         <img src="https://i.imgur.com/8Lhgo08.png" alt="logo" className='logoSize'  />
                          </Link>
                     </div>
           </motion.div>

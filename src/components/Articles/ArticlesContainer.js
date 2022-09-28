@@ -1,21 +1,23 @@
 import '../styles/Articles.css'
 import { getDocs, collection, where, query } from 'firebase/firestore'
 import { db } from '../../services/firebase'
-import {useState, useEffect} from 'react'
+import {useState, useEffect, useContext} from 'react'
 import { useParams } from 'react-router-dom';
 import Articles from './Articles';
-
-
+import CartContext from '../../Context/CartContext';
+import LoadingScreen from '../Loading Screen/LoadingScreen';
 
 
 
 
 const ArticlesContainer = () =>{
 
+     const { articulosIniciales, articulosRecibido } = useContext(CartContext)
 
      const [ articles, setArticles ] = useState([]);
      const {articleId} = useParams()
 
+     articulosRecibido(articles)
   
 
      useEffect(() => {
@@ -40,7 +42,10 @@ const ArticlesContainer = () =>{
 
   return (
      <div>
-          <Articles article={articles}/> 
+          {// eslint-disable-next-line 
+               articulosIniciales == 0 ? <LoadingScreen /> : <Articles article={articles}/>
+          }
+          
      </div>
      )
 }
