@@ -8,7 +8,6 @@ import { CartContextProvider } from './Context/CartContext';
 import Cart from './components/Cart/Cart';
 import Text from './components/Text/Text';
 import Articles from './components/Articles/ArticlesContainer';
-import Footer from './components/Footer/Footer'
 import { Suspense, lazy } from 'react';
 import LoadingScreen from './components/Loading Screen/LoadingScreen';
 
