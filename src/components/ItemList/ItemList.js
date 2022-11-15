@@ -18,6 +18,8 @@ const container = {
 
 
 const ItemList = (props) => {
+
+     console.log(props)
      return (
           <>
                {props.producto.map((item) => {

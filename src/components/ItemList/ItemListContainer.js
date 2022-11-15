@@ -28,7 +28,7 @@ const ItemListContainer = () => {
                ? query(collection(db, 'products'), where('categoria', '==', categoryId))
                : collection(db, 'products')
 
-
+               
           //In case of being on the main page, set 'home' on true
           //In that case, it will change className on items on display
           // eslint-disable-next-line

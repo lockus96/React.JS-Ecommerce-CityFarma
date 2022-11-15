@@ -36,9 +36,7 @@ function App() {
                 <Route path='/cart' element={<Cart />} />
               </Routes>
 
-              <footer>
-                <Footer />
-              </footer>
+             
             </BrowserRouter>
           </CartContextProvider>
         </ChakraProvider>
