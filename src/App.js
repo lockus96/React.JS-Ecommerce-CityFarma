@@ -10,6 +10,7 @@ import Text from './components/Text/Text';
 import Articles from './components/Articles/ArticlesContainer';
 import { Suspense, lazy } from 'react';
 import LoadingScreen from './components/Loading Screen/LoadingScreen';
+import Footer from './components/Footer/Footer'
 
 
 const ItemListContainer = lazy(()=> import('./components/ItemList/ItemListContainer'))
@@ -35,7 +36,9 @@ function App() {
                 <Route path='/cart' element={<Cart />} />
               </Routes>
 
-             
+
+              <Footer />
+              
             </BrowserRouter>
           </CartContextProvider>
         </ChakraProvider>
